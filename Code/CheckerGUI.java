@@ -99,15 +99,17 @@ public class CheckerGUI extends JFrame implements ActionListener{
     private JButton jButton62;
     private JButton jButton63;
     private JButton jButton64;
+    
     private JLabel PlayerOnelabel;
     private JLabel playerTwoLabel;
     private JLabel timeRemainingLabel;
     private JLabel secondsLeftLabel;
+    
     private JButton ResignButton;
     private JButton DrawButton;
     private JLabel warningLabel, whosTurnLabel;
     
-    //the names and time left
+    // the names and time left
     private static String playerOnesName="", playerTwosName="", timeLeft="";
 
     /** 
@@ -124,8 +126,8 @@ public class CheckerGUI extends JFrame implements ActionListener{
 
         super("Checkers");
 
-	//long names mess up the way the GUI displays
-	//this code shortens the name if it is too long
+	// long names mess up the way the GUI displays
+	// this code shortens the name if it is too long
         String nameOne="", nameTwo="";
         if(name1.length() > 7 ){
             nameOne = name1.substring(0,7);

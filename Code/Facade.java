@@ -79,7 +79,7 @@ public class Facade extends Component {
     }
     
     /**
-     * Set which players turn it is.
+     * Set which player's turn it is.
      * 
      * @param active  The active player
      * @param passive The passive player
