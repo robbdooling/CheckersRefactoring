@@ -11,13 +11,13 @@
  *
  */
 import java.awt.*;
-import java.util.*;
 
 /**
  * This is a class representing a king piece (a piece that has been kinged)
  *
  * @author
  *
+ * @deprecated Use an upgraded {@link Piece} object instead.
  */
 public class KingPiece extends Piece {
 
@@ -30,6 +30,8 @@ public class KingPiece extends Piece {
     * @param c - the color of this king piece
     * @param pc - the possible captures of this king piece
     * @param pm - the possible moves of this king piece
+    * 
+    * @deprecated Use an upgraded {@link Piece} object instead.
     */
    public KingPiece( Color c ) {
    
@@ -41,6 +43,8 @@ public class KingPiece extends Piece {
     * This method returns the type of piece that this object is 
     * 
     * @return 1 for the king piece representation
+    * 
+    * @deprecated This class is deprecated; use {@link Piece#getType()} instead.
     */
    public int getType() {
   
