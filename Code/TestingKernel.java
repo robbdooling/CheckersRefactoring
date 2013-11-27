@@ -132,7 +132,7 @@ public class TestingKernel extends java.lang.Object{
         report( passedTest, "Sets Player Two name", 3 );
         
         // The Timer.
-        passedTest = ( testTime == testFacade.getTimer() );
+        passedTest = ( testTime == theDriver.getTimer() );
         report( passedTest, "Sets Timer", 4 );
                
         // These are intended to run in succession.  So pieces are assumed

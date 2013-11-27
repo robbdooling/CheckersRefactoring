@@ -32,6 +32,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
     //the facade for the game
     
     private static Facade theFacade; //the facade
+    private static Driver theDriver; //the Driver
     private Vector possibleSquares = new Vector();//a vector of the squares
     private int timeRemaining;//the time remaining
     
@@ -120,7 +121,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
      *
      */
 
-    public CheckerGUI( Facade facade, String name1, String name2 ) {
+    public CheckerGUI( Facade facade, String name1, String name2, Driver driver ) {
 
         super("Checkers");
 
@@ -141,6 +142,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
         playerOnesName = nameOne;
         playerTwosName = nameTwo;
         theFacade = facade;
+	theDriver = driver;
         register();
         
         initComponents ();
@@ -1213,7 +1215,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 		//if its a player switch event
 		if ( (e.getActionCommand()).equals(theFacade.playerSwitch) ) {
 		    //set a new time
-		    timeRemaining = theFacade.getTimer();
+		    timeRemaining = theDriver.getTimer();
 		    //if it is an update event
 		} else if ( (e.getActionCommand()).equals(theFacade.update) ) {
 		    //update the GUI
@@ -1351,7 +1353,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
         
     public void updateTime() {            
             
-	if ( theFacade.getTimer() > 0 ) {
+	if ( theDriver.getTimer() > 0 ) {
                 
 	    // if the time has run out but not in warning time yet
 	    // display warning and count warning time

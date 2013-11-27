@@ -433,5 +433,26 @@ public class Driver {
 	
 	return timer;
     }
+
+    /**
+     * Returns the timer value, how long each player get to take a turn
+     * 
+     * @return the amount of time each player has for a turn 
+     * 
+     * @pre there has been a timer set for the current game
+     * 
+     */
+    public int getTimer(){
+	int retval = 0;
+
+	// Makes sure there is a timer for this game
+	if( timerRunning() ){
+	    retval = theTimer.getTime();
+	}
+
+	// Returns the timer value
+	return retval;
+    }
+    
     
 }//Driver.java

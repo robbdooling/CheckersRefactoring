@@ -23,7 +23,7 @@
 public class Timer extends Thread{
 
     private static int INTERVAL = 100;    
-    private int      interval;
+    public int      interval;
     private Notifier notifier;
     
     /**
@@ -73,6 +73,10 @@ public class Timer extends Thread{
      */
     public Notifier getNotifier(){
 	return notifier;
+    }
+
+    public int getTime(){
+	return interval;
     }
     
 }// Timer.java
