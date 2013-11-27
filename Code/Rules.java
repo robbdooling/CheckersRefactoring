@@ -35,9 +35,9 @@ public class Rules {
 	      					    // adj. to adjacentSpots.
     private int middle = 0;  // The space of a piece that gets jumped
     private final int KING = 1; // Constant to represent a king piece.
-    private Vector leftWallPieces = new Vector(); // Positions of the left
+    private Vector<Integer> leftWallPieces = new Vector<Integer>(); // Positions of the left
 	       				         // wall spaces.
-    private Vector rightWallPieces = new Vector(); // Positions of the right
+    private Vector<Integer> rightWallPieces = new Vector<Integer>(); // Positions of the right
 						   // wall spaces.
     
     /**
@@ -83,12 +83,11 @@ public class Rules {
 	    int pieceType = theBoard.getPieceAt( start ).getType();// Type of
 	                                                      // the piece.
 	    // Contains any possible moves if the piece is on the wall.
-            Vector wallMoves = new Vector();
-	    Vector pieces = new Vector();
-	    Vector tempVec = new Vector();
-	    Vector startVec = new Vector();
-	    //Vector possibleJumps = new Vector();
-	    Vector possibleJumps = checkForPossibleJumps( start, pieceType,
+            Vector<Integer> wallMoves = new Vector<Integer>();
+	    Vector<Integer> pieces = new Vector<Integer>();
+	    Vector<Integer> tempVec = new Vector<Integer>();
+	    Vector<Integer> startVec = new Vector<Integer>();
+	    Vector<Integer> possibleJumps = checkForPossibleJumps( start, pieceType,
 							  player );
 	    // Check all pieces for jumps.
 	    //if ( player.getColor() == Color.white ) {
@@ -225,9 +224,9 @@ public class Rules {
 	
 	boolean retval = false;       
     	// A vector of any possible jumps that can be made.
-        Vector possibleJumps = new Vector(); 
+        Vector<Integer> possibleJumps = new Vector<Integer>(); 
     	// A vector of any possible non-jumping moves.
-        Vector possibleMoves = new Vector();  
+        Vector<Integer> possibleMoves = new Vector<Integer>();  
         Player player = currentMove.getPlayer(); // Current player.
         // If done is true, there are possible moves so drop out of while loop.
         boolean done = false; 
@@ -304,10 +303,10 @@ public class Rules {
      *
      *  @return possibleJumps which contains end positions of possible jumps.
      */	
-    private Vector checkForPossibleJumps( int piecePosition, int pieceType, 
+    private Vector<Integer> checkForPossibleJumps( int piecePosition, int pieceType, 
 					  Player aPlayer ) {
 	
-	Vector possibleJumps = new Vector();
+	Vector<Integer> possibleJumps = new Vector<Integer>();
 	boolean adjacentSpace = false;
 	boolean endSpace = false;
 	
@@ -469,7 +468,7 @@ public class Rules {
     	try{
 	    
 	    boolean adjacentSpace = false;
-	    Vector possibleJumps = new Vector();
+	    Vector<Integer> possibleJumps = new Vector<Integer>();
 	    Piece aPiece;
 	    Player player = aPlayer;
 	    boolean endSpace = false;
@@ -662,11 +661,11 @@ public class Rules {
      *
      *  @return Vector of possible end positions for the piece.
      */
-    private Vector checkForPossibleMoves( int piecePosition, int pieceType,
+    private Vector<Integer> checkForPossibleMoves( int piecePosition, int pieceType,
 					  Player aPlayer ) {
 	
         
-	Vector possibleMoves = new Vector();
+	Vector<Integer> possibleMoves = new Vector<Integer>();
 	boolean adjacentSpace = false;
 	Player player = aPlayer;
 	
@@ -751,10 +750,10 @@ public class Rules {
      *
      *  @return moves, a vector of end positions for the piece.
      */
-    private Vector wallPieceMoves( int piecePosition, boolean jump, 
+    private Vector<Integer> wallPieceMoves( int piecePosition, boolean jump, 
 				   int pieceType , Player aPlayer ) {
 	
-	Vector moves = new Vector();
+	Vector<Integer> moves = new Vector<Integer>();
 	
         try{
 	    
