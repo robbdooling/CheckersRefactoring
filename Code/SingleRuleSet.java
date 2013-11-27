@@ -58,11 +58,24 @@ public class SingleRuleSet extends RuleSet {
 	else
 	  return null;
 
-	int pieceLocationMod = piece.getLocation() % 8;
-	if (pieceLocationMod == 0) locations[0] = Integer.MIN_VALUE;
-	if (pieceLocationMod == 7) locations[1] = Integer.MIN_VALUE;
-	if (pieceLocationMod == 1) locations[2] = Integer.MIN_VALUE;
-	if (pieceLocaitonMod == 6) locations[3] = Integer.MIN_VALUE;
+	int pieceLocationVerMod = (piece.getLocation() / 8) % 8;
+	if (pieceLocationVerMod < 2 && locations[0] < 0) {
+		for (int i = 4 - (pieceLocationVerMod * 2); i < 4; i++) {
+			locations[i] = Integer.MIN_VALUE;
+		}
+	}
+
+	if (pieceLocationVerMod > 5 && locations[0] > 0) {
+		for (int i = 4 - ((pieceLocationVerMod - 6) * 2); i < 4; i++) {
+			locations[i[ = Integer.MIN_VALUE;
+		}
+	}
+	
+	int pieceLocationHorMod = piece.getLocation() % 8;
+	if (pieceLocationHorMod == 0) locations[0] = Integer.MIN_VALUE;
+	if (pieceLocationHorMod == 7) locations[1] = Integer.MIN_VALUE;
+	if (pieceLocationHorMod == 1) locations[2] = Integer.MIN_VALUE;
+	if (pieceLocationHorMod == 6) locations[3] = Integer.MIN_VALUE;
 
 	return locations;
     }
