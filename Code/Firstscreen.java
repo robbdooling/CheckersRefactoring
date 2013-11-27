@@ -230,7 +230,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			//hide the Firstscreen, make a Secondscreen and show it
 			this.hide();
 			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME );
-			next.show();
+			next.setVisible(true);
 			
 			//if the host game button is selected
 		    } else if( tempButton.getActionCommand().equals( "host" ) ){
@@ -244,7 +244,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			//hide the Firstscreen, make the Secondscreen and show it
 			this.hide();
 			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME );
-			next.show();
+			next.setVisible(true);
 			
 			//if the join game button is selected
 		    } else if( tempButton.getActionCommand().equals( "join" ) ){
@@ -266,7 +266,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			    //hide the Firstscreen, make and show the Second screen
 			    this.hide();
 			    next = new Secondscreen( theFacade, this, theFacade.CLIENTGAME );
-			    next.show();
+			    next.setVisible(true);
                                         
 			    //catch any exceptions
 			} catch ( MalformedURLException x ) {
