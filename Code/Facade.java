@@ -234,36 +234,6 @@ public class Facade extends Component {
     
     
     /**
-     * Tell the kernel to set a time limit for each turn.  The time 
-     * limit, i.e. the amount of time a player has during his turn 
-     * before he is given a time warning, is specified by the parameter 
-     * called time, in minutes.
-     *
-     * Tell the kernel to set a time limit for each turn.   The warning 
-     * time, i.e. the amount of time a player has during his turn after 
-     * he is given a time warning, is specified by the parameter called 
-     * time, in minutes.
-     * 
-     * @param time the time limit for each turn, in seconds.
-     *
-     * @pre   10 <= time <= 300.
-     */
-    public void setTimer( int time, int warning ) throws Exception{
-	// Checks to see that time is in between the necessary frame
-	// Sets time(class variable) to time(param value)
-	if( ( time == -1 ) || ( ( time >= 10 || time <= 300 ) 
-				&& ( warning >= 10 || warning <= 300 ) ) ){
-	    
-	    timer       = time;
-	    warningTime = warning;
-	    theDriver.setTimer( time, warning );
-	
-	} else {
-	    throw new Exception( "Invalid timer settings" );
-	}	   
-    }
-    
-    /**
      * Tell the kernel to connect to the specified host to 
      * start a network game.
      *

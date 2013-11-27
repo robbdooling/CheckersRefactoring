@@ -31,6 +31,7 @@ public class Secondscreen extends JFrame
     private Facade theFacade;
     private Firstscreen theFirst;
     private int gameType;
+    private Driver theDriver;
     
     // Variables declaration
     private Checkbox timedGameBox;
@@ -57,12 +58,13 @@ public class Secondscreen extends JFrame
      * 
      */
     
-    public Secondscreen( Facade f, Firstscreen first, int type ) {
+    public Secondscreen( Facade f, Firstscreen first, int type, Driver d ) {
 
         super( "Second Screen" );
         theFacade = f;
         theFirst = first;
         gameType = type;
+	theDriver = d;
         
         initComponents ();
         pack ();
@@ -300,7 +302,7 @@ public class Secondscreen extends JFrame
 			//set the 2 timer values
 			try {
 			   
-			    theFacade.setTimer( turnLengthField.getValue(),
+			    theDriver.setTimer( turnLengthField.getValue(),
 						warningLengthField.getValue() );
 			    
 			} catch ( Exception x ) {
@@ -312,11 +314,11 @@ public class Secondscreen extends JFrame
 			}
 			//else set timer values to a no timer constant
 		    } else {
-			theFacade.setTimer( -1, -1 );
+			theDriver.setTimer( -1, -1 );
 			
 		    }
 		} else {
-		    theFacade.setTimer( -1, -1 );
+		    theDriver.setTimer( -1, -1 );
 		   
 		}
 		

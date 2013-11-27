@@ -276,17 +276,22 @@ public class Driver {
      * @post The timer has been created and the appropriate time 
      *       restraints are in place
      */
-    public void setTimer( int time, int warning ){
+    public void setTimer( int time, int warning ) throws Exception{
+	// Checks to see that time is in between the necessary frame
    	// If values are negative, set runningTimer to false
 	// If they are positive values, create the Timer and 
 	// notifier with the times
-
-	if ( time < 0 ) {
-	    runningTimer = false;
-	} else {
-	    runningTimer = true;
-	    theTimer = new Timer();
-	}
+       if( ( time == -1 ) || ( ( time >= 10 || time <= 300 ) 
+				&& ( warning >= 10 || warning <= 300 ) ) ){
+	    if ( time < 0 ) {
+	         runningTimer = false;
+	    } else {
+	         runningTimer = true;
+	         theTimer = new Timer();
+	    }
+       } else {
+		throw new Exception( "Invalid timer settings" );
+       }
         
     }
         
