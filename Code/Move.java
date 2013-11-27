@@ -20,7 +20,7 @@ import java.io.*;
  * @author
  */
  public class Move {
-	 
+	private Piece piece;            // piece being moved 
 	private int startingLocation;	// the starting location
 	private int endingLocation;	// the ending location
 
@@ -38,15 +38,23 @@ import java.io.*;
 	 * @param endLoc   The ending point of the move
 	 * 
 	 * @pre startLoc and endLoc are valid locations
+         * @deprecated Use {@link Move(Piece, location)} instead
 	 */
 	public Move( Player player, int startLoc, int endLoc ) {
 	
 		thePlayer = player;
 		startingLocation = startLoc;
 		endingLocation = endLoc;
+		this.piece = null;
 	}
 
-     
+        public Move(Piece piece, int location) {
+		this.piece = piece;
+		this.endingLocation = location;
+		this.player = null;
+		this.startingLocation = null;
+	}
+
 	/**
 	 * Return the player who made this move
 	 * 
@@ -59,6 +67,7 @@ import java.io.*;
 		return thePlayer;
 	}
 
+	public Piece getPiece() { return this.piece; }
      
 	/**
 	 * Return the starting location of this move.
