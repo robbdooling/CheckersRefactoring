@@ -228,7 +228,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			theFacade.createPlayer( 2, theFacade.LOCALGAME );
 			
 			//hide the Firstscreen, make a Secondscreen and show it
-			this.hide();
+			this.setVisible(false);
 			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME );
 			next.setVisible(true);
 			
@@ -242,7 +242,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			theFacade.createPlayer( 2, theFacade.HOSTGAME );
 			
 			//hide the Firstscreen, make the Secondscreen and show it
-			this.hide();
+			this.setVisible(false);
 			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME );
 			next.setVisible(true);
 			
@@ -264,7 +264,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			    theFacade.setHost( address );
 			    
 			    //hide the Firstscreen, make and show the Second screen
-			    this.hide();
+			    this.setVisible(false);
 			    next = new Secondscreen( theFacade, this, theFacade.CLIENTGAME );
 			    next.setVisible(true);
                                         
