@@ -325,14 +325,14 @@ public class Secondscreen extends JFrame
 		//start the game
 		theFacade.startGame();
 		//hide this screen, make and show the GUI
-		this.hide();
+		this.setVisible(false);
 		CheckerGUI GUI = new CheckerGUI( theFacade, theFacade.getPlayerName( 1 ),
 						 theFacade.getPlayerName( 2 ) );
 		GUI.setVisible(true);
 		
 		//if they hit cancel go to the previous screen
 	    } else if( e.getActionCommand().equals( "cancel" ) ) {
-		this.hide();
+		this.setVisible(false);
 		theFirst.setVisible(true);
 		
 		//handle whether or not a timer is desired
