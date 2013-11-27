@@ -25,6 +25,7 @@ import java.awt.*;
 public class Board {
 
    private Piece pieces[]; // the pieces that are on the board
+   // These will probably be removed later
    public static int SINGLE = 0;
    public static int KING = 1;
 
@@ -70,8 +71,6 @@ public class Board {
 
    }
 
-   
-
    /**
     * Move the piece at the start position to the end position
     * 
@@ -79,6 +78,7 @@ public class Board {
     * @param end - the position where piece is moved
     * 
     * @return -1 if there is a piece in the end position
+    * @deprecated Use {@link movePiece(Move)} instead, but this might be a better format
     */
    public int movePiece(int start, int end) {
 
@@ -107,7 +107,16 @@ public class Board {
 
    }
 
-   
+   public int movePiece(Move move) {
+	// TODO Consider jumping moves
+        Piece p = piece[move.getPiece().getLocation()];
+	piece[p.getLocation()] = null;
+	piece[move.endingLocation()] = p;
+
+	p.move(move.getLocation());
+	
+	return 0; // This is only 0 so that nothing breaks while we refactor
+   }
 
    /**
     * This method checks if the space on the board contains a piece
@@ -156,14 +165,7 @@ public class Board {
     * @param space - the psotion at which the king piece is created 
     */
    public void kingPiece(int space) {
-   
-	   // create a new king piece
-	   // go to the space position in the array and place it there
-	   // if the position is not ocupied
-	   Color color = pieces[space].getColor();
-	   Piece piece = new KingPiece( color );
-	   pieces[space] = piece;
-	   
+	pieces[space].upgrade();
    }
    
    
