@@ -33,7 +33,7 @@ public class KingPiece extends Piece {
     */
    public KingPiece( Color c ) {
    
-	   super( c ); 
+	   super( c, -3, null ); 
 	   type = KING;
    }
    

@@ -36,7 +36,7 @@ public class SinglePiece extends Piece {
     */
    public SinglePiece( Color c  ) {
  
-	    super( c );
+	    super( c, -3, null );
 		type = SINGLE;
    }
    
