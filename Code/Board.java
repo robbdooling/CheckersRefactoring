@@ -42,32 +42,32 @@ public class Board {
 	   pieces = new Piece[64];
 
 	   // create blue pices
-	   pieces[1] = new SinglePiece( Color.blue );
-	   pieces[3] = new SinglePiece( Color.blue );
-	   pieces[5] = new SinglePiece( Color.blue );
-	   pieces[7] = new SinglePiece( Color.blue );
-	   pieces[8] = new SinglePiece( Color.blue );
-	   pieces[10] = new SinglePiece( Color.blue );
-	   pieces[12] = new SinglePiece( Color.blue );
-	   pieces[14] = new SinglePiece( Color.blue );
-	   pieces[17] = new SinglePiece( Color.blue );
-	   pieces[19] = new SinglePiece( Color.blue );
-	   pieces[21] = new SinglePiece( Color.blue );
-	   pieces[23] = new SinglePiece( Color.blue );
+	   pieces[1] = new SinglePiece( Color.blue, 1, this );
+	   pieces[3] = new SinglePiece( Color.blue, 3, this );
+	   pieces[5] = new SinglePiece( Color.blue, 5, this );
+	   pieces[7] = new SinglePiece( Color.blue, 7, this );
+	   pieces[8] = new SinglePiece( Color.blue, 8, this );
+	   pieces[10] = new SinglePiece( Color.blue, 10, this );
+	   pieces[12] = new SinglePiece( Color.blue, 12, this );
+	   pieces[14] = new SinglePiece( Color.blue, 14, this );
+	   pieces[17] = new SinglePiece( Color.blue, 17, this );
+	   pieces[19] = new SinglePiece( Color.blue, 19, this );
+	   pieces[21] = new SinglePiece( Color.blue, 21, this );
+	   pieces[23] = new SinglePiece( Color.blue, 23, this );
 
 	   // create the white pieces
-	   pieces[40] = new SinglePiece( Color.white );
-	   pieces[42] = new SinglePiece( Color.white );
-	   pieces[44] = new SinglePiece( Color.white );
-	   pieces[46] = new SinglePiece( Color.white );
-	   pieces[49] = new SinglePiece( Color.white );
-	   pieces[51] = new SinglePiece( Color.white );
-	   pieces[53] = new SinglePiece( Color.white );
-	   pieces[55] = new SinglePiece( Color.white );
-	   pieces[56] = new SinglePiece( Color.white );
-	   pieces[58] = new SinglePiece( Color.white );
-	   pieces[60] = new SinglePiece( Color.white );
-	   pieces[62] = new SinglePiece( Color.white );
+	   pieces[40] = new SinglePiece( Color.white, 40, this );
+	   pieces[42] = new SinglePiece( Color.white, 42, this );
+	   pieces[44] = new SinglePiece( Color.white, 44, this );
+	   pieces[46] = new SinglePiece( Color.white, 46, this );
+	   pieces[49] = new SinglePiece( Color.white, 49, this );
+	   pieces[51] = new SinglePiece( Color.white, 51, this );
+	   pieces[53] = new SinglePiece( Color.white, 53, this );
+	   pieces[55] = new SinglePiece( Color.white, 55, this );
+	   pieces[56] = new SinglePiece( Color.white, 56, this );
+	   pieces[58] = new SinglePiece( Color.white, 58, this );
+	   pieces[60] = new SinglePiece( Color.white, 60, this );
+	   pieces[62] = new SinglePiece( Color.white, 62, this );
 
    }
 
@@ -204,8 +204,7 @@ public class Board {
     */
    public Piece getPieceAt(int space) {
 
-	   Piece returnValue = new SinglePiece(Color.red);
-	   
+	  Piece returnValue = null; 
 	   try{
 	   	   // check if there is piece at space position
 	   	   // if there is none, return null
