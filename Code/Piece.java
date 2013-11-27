@@ -81,12 +81,16 @@ public class Piece {
      */
     public Color getColor() { return color; }
     
+    void move(int location) {
+        this.location = location;
+    }
+
     /**
      * Upgrade the type of piece this is.
      */
     public void upgrade() { 
         this.type = KING;
-        this.rules = new KingRuleSet();
+	this.rules = new KingRuleSet();
     }
     
     public boolean validateMove(Move move) {
