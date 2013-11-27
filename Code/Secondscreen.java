@@ -292,8 +292,8 @@ public class Secondscreen extends JFrame
 		    }
 		}
 		
-		theFacade.setPlayerName( 1, playerOneField.getText() );
-		theFacade.setPlayerName( 2, playerTwoField.getText() );
+		theDriver.setPlayerName( 1, playerOneField.getText() );
+		theDriver.setPlayerName( 2, playerTwoField.getText() );
 		
 		//if a timer is desired
 		if ( timedGameBox.isEnabled() ) {

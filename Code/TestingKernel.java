@@ -97,8 +97,8 @@ public class TestingKernel extends java.lang.Object{
             theDriver.createPlayer( 2, Player.LOCALPLAYER, playerTwo );
             
             // Set the names for the players.
-            testFacade.setPlayerName( 1, playerOne );
-            testFacade.setPlayerName( 2, playerTwo );
+            theDriver.setPlayerName( 1, playerOne );
+            theDriver.setPlayerName( 2, playerTwo );
         
             // Give a generous time.  At this point, it will allow 
             // adequate time for this program to run, but perform a 

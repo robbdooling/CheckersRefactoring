@@ -38,6 +38,7 @@ public class Driver {
     private Timer   theTimer;
     private Facade  theFacade;
     private Rules   theRules;
+    private int	    warningTime = 999;
     
     /**
      * Constructor
@@ -451,6 +452,26 @@ public class Driver {
 	}
 
 	// Returns the timer value
+	return retval;
+    }
+
+    /**
+     * Returns the amount of time chosen for a warning that a player is 
+     * near the end of his/her turn.
+     * 
+     * @return the amount of warning time a player has
+     * 
+     * @pre there has been a timer set for the current game  
+     */
+    public int getTimerWarning(){
+	int retval = -1;
+
+	// Makes sure there is a timer for this game
+	if( warningTime != 999 ){
+	    retval = warningTime;
+	}
+
+	// Returns the timer value (clas variable: warningTime )
 	return retval;
     }
     

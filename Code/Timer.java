@@ -55,7 +55,7 @@ public class Timer extends Thread{
 	// Notify the facade every interval
 	while ( true ) {
 	    try {
-		sleep( interval );
+		sleep( INTERVAL );
 	    }
 	    catch ( InterruptedException e ) {
 		System.err.println( "The timer malfunctioned." );

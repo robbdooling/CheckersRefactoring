@@ -41,9 +41,6 @@ public class Facade extends Component {
     private int startSpace = 99; // Starting space for current move
     private int endSpace   = 99; // Ending space for current move
     
-    // The numbers associated with the timer
-    private int timer       = 999;
-    private int warningTime = 999;
     
     private ActionListener actionListener;
       
@@ -219,19 +216,6 @@ public class Facade extends Component {
 	return retString;
     }
     
-    /**
-     * Tell the kernel to associate the given name with the 
-     * given player number.
-     *
-     * @param playerNum the number of a player
-     * @param name      the name that player should be given
-     *
-     * @pre playerNum is a valid player number
-     */
-    public void setPlayerName( int playerNum, String name ){
-	theDriver.setPlayerName( playerNum, name );
-    }
-    
     
     /**
      * Tell the kernel to connect to the specified host to 
@@ -283,45 +267,7 @@ public class Facade extends Component {
 	}
     }
     
-    /**
-     * Returns the timer value, how long each player get to take a turn
-     * 
-     * @return the amount of time each player has for a turn 
-     * 
-     * @pre there has been a timer set for the current game
-     * 
-     */
-    public int getTimer(){
-	int retval = 0;
-
-	// Makes sure there is a timer for this game
-	if( timer != 999 ){
-	    retval = timer;
-	}
-
-	// Returns the timer value (clas variable: time )
-	return retval;
-    }
     
-    /**
-     * Returns the amount of time chosen for a warning that a player is 
-     * near the end of his/her turn.
-     * 
-     * @return the amount of warning time a player has
-     * 
-     * @pre there has been a timer set for the current game  
-     */
-    public int getTimerWarning(){
-	int retval = -1;
-
-	// Makes sure there is a timer for this game
-	if( warningTime != 999 ){
-	    retval = warningTime;
-	}
-
-	// Returns the timer value (clas variable: warningTime )
-	return retval;
-    }
    
     /**
      * Adds an action listener to the facade

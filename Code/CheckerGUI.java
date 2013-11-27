@@ -1358,7 +1358,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 	    // if the time has run out but not in warning time yet
 	    // display warning and count warning time
 	    if ( timeRemaining <= 0 && ( warningLabel.getText() ).equals( "" ) ) {
-		timeRemaining = theFacade.getTimerWarning();
+		timeRemaining = theDriver.getTimerWarning();
 		warningLabel.setText( "Time is running out!!!" );
                     
                 // if the time has run out and it was in warning time quit game
