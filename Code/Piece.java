@@ -21,15 +21,20 @@
 
 import java.awt.*;
 
+/**
+ * Handles information related to individual pieces on a checkers board.
+ * @author Ty
+ *
+ */
 public class Piece {
 
-    // Static variables
-    public static final int SINGLE = 0; // Single Piece Type
-    public static final int KING = 1;   // King Piece Type
+    /** Represents a Single-type piece. */
+    public static final int SINGLE = 0;
+    /** Represents a King-type piece. */
+    public static final int KING = 1;
     
-    private static int ID = 0;          // Increment with each new ID
+    private static int ID = 0;  // Increment with each new ID
     
-    // Instance variables
     private int id;
     private int location;
     private int type;
@@ -67,18 +72,8 @@ public class Piece {
     
     public int getLocation() { return this.location; }
 
-    /**
-     * The method which is abstract
-     * 
-     * @return the type of the piece
-     */
     public int getType() { return this.type; }
 
-    /**
-     * This method returns the color of this piece
-     * 
-     * @return the color for this piece
-     */
     public Color getColor() { return color; }
     
     void move(int location) {
@@ -87,10 +82,13 @@ public class Piece {
 
     /**
      * Upgrade the type of piece this is.
+     * 
+     * If this a Single-type, it internally updates itself to a King-type. If 
+     * it's already a King-type, nothing happens.
      */
     public void upgrade() { 
         this.type = KING;
-	this.rules = new KingRuleSet();
+	    this.rules = new KingRuleSet();
     }
     
     public boolean validateMove(Move move) {
