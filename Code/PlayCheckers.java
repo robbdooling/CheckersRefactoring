@@ -34,7 +34,7 @@ class PlayCheckers{
 	
 	Driver theDriver = new Driver();
 	
-	Firstscreen first = new Firstscreen( theDriver.getFacade() );
+	Firstscreen first = new Firstscreen( theDriver.getFacade(), theDriver );
 	first.setVisible(true);
 	
     }

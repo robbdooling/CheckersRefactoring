@@ -24,6 +24,7 @@ import java.awt.*;
 public class Firstscreen extends JFrame implements ActionListener{
 
     Facade theFacade;
+    Driver theDriver;
     Secondscreen next;
   
     // Variables declaration - do not modify
@@ -46,10 +47,11 @@ public class Firstscreen extends JFrame implements ActionListener{
      *     
      */
 
-    public Firstscreen( Facade facade ) {
+    public Firstscreen( Facade facade, Driver driver ) {
 
 	super( "First screen" );
         theFacade = facade;
+	theDriver = driver;
         initComponents();
         pack();
     }
@@ -228,9 +230,9 @@ public class Firstscreen extends JFrame implements ActionListener{
 			theFacade.createPlayer( 2, theFacade.LOCALGAME );
 			
 			//hide the Firstscreen, make a Secondscreen and show it
-			this.setVisible(false);
-			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME );
-			next.setVisible(true);
+			this.hide();
+			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME, 					theDriver );
+			next.show();
 			
 			//if the host game button is selected
 		    } else if( tempButton.getActionCommand().equals( "host" ) ){
@@ -242,9 +244,9 @@ public class Firstscreen extends JFrame implements ActionListener{
 			theFacade.createPlayer( 2, theFacade.HOSTGAME );
 			
 			//hide the Firstscreen, make the Secondscreen and show it
-			this.setVisible(false);
-			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME );
-			next.setVisible(true);
+			this.hide();
+			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME, 					theDriver );
+			next.show();
 			
 			//if the join game button is selected
 		    } else if( tempButton.getActionCommand().equals( "join" ) ){
@@ -264,9 +266,9 @@ public class Firstscreen extends JFrame implements ActionListener{
 			    theFacade.setHost( address );
 			    
 			    //hide the Firstscreen, make and show the Second screen
-			    this.setVisible(false);
-			    next = new Secondscreen( theFacade, this, theFacade.CLIENTGAME );
-			    next.setVisible(true);
+			    this.hide();
+			    next = new Secondscreen( theFacade, this, theFacade.CLIENTGAME, 					theDriver );
+			    next.show();
                                         
 			    //catch any exceptions
 			} catch ( MalformedURLException x ) {
