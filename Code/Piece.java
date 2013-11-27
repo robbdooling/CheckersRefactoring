@@ -84,7 +84,10 @@ public class Piece {
     /**
      * Upgrade the type of piece this is.
      */
-    public void upgrade() { this.type = KING; }
+    public void upgrade() { 
+        this.type = KING;
+        this.rules = new KingRuleSet();
+    }
     
     public boolean validateMove(Move move) {
         return this.rules.validateMove(move, this.board);
