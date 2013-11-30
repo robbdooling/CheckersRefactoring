@@ -11,9 +11,6 @@
  *
  */
 
-import java.util.*;
-import java.io.*;
-
 /**
  * An object representation of a move.
  *
@@ -22,7 +19,7 @@ import java.io.*;
  public class Move {
 	private Piece piece;            // piece being moved 
 	private int startingLocation;	// the starting location
-	private int endingLocation;	// the ending location
+	private int endingLocation;	    // the ending location
 
 	/**
 	 *  The player that this move is intended for.
@@ -51,8 +48,8 @@ import java.io.*;
         public Move(Piece piece, int location) {
 		this.piece = piece;
 		this.endingLocation = location;
-		this.player = null;
-		this.startingLocation = null;
+		this.thePlayer = null;
+		this.startingLocation = Integer.MIN_VALUE;
 	}
 
 	/**
