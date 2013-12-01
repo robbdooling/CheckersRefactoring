@@ -331,10 +331,10 @@ public class Driver {
     public void startGame(){
 	selectColors();
        
-	if ( gameType == theFacade.HOSTGAME ) {
+	if ( gameType == HOSTGAME ) {
 	    ( (NetworkPlayer)playerTwo).waitForConnect();
 	    //( (NetworkPlayer)playerTwo).waitForConnect();
-	} else if ( gameType == theFacade.CLIENTGAME ) {
+	} else if ( gameType == CLIENTGAME ) {
 	    //( (NetworkPlayer)playerOne).connectToHost();
 	    ( (NetworkPlayer)playerOne).connectToHost();
 	}
@@ -364,8 +364,10 @@ public class Driver {
      */
     public void setHost( URL host ){
    	// Call connectToHost in player two with the URL
-	((NetworkPlayer)playerOne).setHost( host );
-	((NetworkPlayer)playerTwo).setHost( host );
+       if( host != null ){
+	     ((NetworkPlayer)playerOne).setHost( host );
+	     ((NetworkPlayer)playerTwo).setHost( host );
+       }
     }
     
     /**
@@ -391,6 +393,7 @@ public class Driver {
 	// Return the board so GUI can go through and update itself
 	return theBoard;
     }
+
     
     /**
      * Whether the current game uses a timer
@@ -409,14 +412,18 @@ public class Driver {
     /**
      * Select the type of game
      *
-     * @param mode the mode (0 local, 1 host, 2 client) of the game
+     * @param mode the mode (local, host, client) of the game
      *
      * @pre  Players have not been created
      * @post Mode is set
      */
-    public void setGameMode( int newMode ){
+    public void setGameMode( int newMode ) throws Exception{
 	// Set the value of mode
-	gameType = newMode;
+       if( newMode == LOCALGAME || newMode == HOSTGAME || newMode == CLIENTGAME ){
+           gameType = newMode;
+       }else {
+           throw new Exception( "Invalid Game Mode" );
+       }
     }
     
     /**

@@ -142,7 +142,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
         playerOnesName = nameOne;
         playerTwosName = nameTwo;
         theFacade = facade;
-	theDriver = driver;
+        theDriver = driver;
         register();
         
         initComponents ();
@@ -1253,7 +1253,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 	
 	if( checkEndConditions() ){
 	    
-	    theFacade.showEndGame(" ");
+	    theDriver.endGame(" ");
 	}
 	//the board to read information from
 	Board board = theDriver.stateOfBoard();

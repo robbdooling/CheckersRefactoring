@@ -218,74 +218,11 @@ public class Facade extends Component {
     
     
     /**
-     * Tell the kernel to connect to the specified host to 
-     * start a network game.
-     *
-     * @param host
-     *
-     * @pre   host != null
-     */
-    public void setHost( URL host ){
-	// Makes sure host isnt null
-	// Calls setHost() in driver
-	if( host != null ){
-	    theDriver.setHost( host );
-	}
-    }
-    
-    /**
-     * Display to local players that the game has ended with 
-     * the message provided.
-     * 
-     * @param message
-     * 
-     * @post the game ends
-     */
-    public void showEndGame( String message ){
-	//make sure game is over
-	//calls endGame in driver object
-	theDriver.endGame( message );
-    }
-    
-    /**
-     * Set the game mode: a local game or a network game
-     * 
-     * @param the mode of the game
-     * 
-     * @pre we are in the setup for a game
-     * 
-     */
-    public void setGameMode( int mode ) throws Exception{
-	// Check to make sure that mode is a legal value
-	// Call setGameMode() in driver class passing it 
-	// the legal mode.  If mode is not a legal value 
-	// an exception will be thrown
-       	if( mode == LOCALGAME || mode == HOSTGAME || mode == CLIENTGAME ){
-	    theDriver.setGameMode( mode );
-	}else {
-	    throw new Exception( "Invalid Game Mode" );
-	}
-    }
-    
-    
-   
-    /**
      * Adds an action listener to the facade
      */
     public void addActionListener( ActionListener a ){
 	actionListener = AWTEventMulticaster.add( actionListener, a );
 	//Adds an action listener to the facade
-    }
-    
-    /**
-     * Called when both players have clicked OK on the end game dialog box
-     * 
-     * @post the game has ended 
-     */
-    public void endGameAccepted(){
-	
-	//waits until both players have accepted the end of the game 
-	//end the game
     }
     
     

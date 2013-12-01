@@ -64,7 +64,7 @@ public class Secondscreen extends JFrame
         theFacade = f;
         theFirst = first;
         gameType = type;
-	theDriver = d;
+        theDriver = d;
         
         initComponents ();
         pack ();
@@ -231,11 +231,11 @@ public class Secondscreen extends JFrame
        
 	//determine what components should be disabled
 	//depending on the game mode
-	if ( gameType == theFacade.LOCALGAME ) {
-	} else if ( gameType == theFacade.HOSTGAME ) {
+	if ( gameType == theDriver.LOCALGAME ) {
+	} else if ( gameType == theDriver.HOSTGAME ) {
 	    playerTwoLabel.setEnabled( false );
 	    playerTwoField.setEnabled( false );
-	} else if ( gameType == theFacade.CLIENTGAME ) {
+	} else if ( gameType == theDriver.CLIENTGAME ) {
 	    playerOneLabel.setEnabled( false );
 	    playerOneField.setEnabled( false );
 	    

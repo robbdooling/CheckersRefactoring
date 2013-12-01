@@ -224,7 +224,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 		    if( tempButton.getActionCommand().equals( "local" ) ){
 			
 			//set up a local game
-			theFacade.setGameMode( theDriver.LOCALGAME );
+			theDriver.setGameMode( theDriver.LOCALGAME );
 			
 			theDriver.createPlayer( 1, Player.LOCALPLAYER, "UnNamedPlayer" );
 			theDriver.createPlayer( 2, Player.LOCALPLAYER, "UnNamedPlayer" );
@@ -238,7 +238,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 		    } else if( tempButton.getActionCommand().equals( "host" ) ){
 			
 			//set up to host a game
-			theFacade.setGameMode( theDriver.HOSTGAME );
+			theDriver.setGameMode( theDriver.HOSTGAME );
 			
 			theDriver.createPlayer( 1, Player.NETWORKPLAYER, "UnNamedPlayer" );
 			theDriver.createPlayer( 2, Player.NETWORKPLAYER, "UnNamedPlayer" );
@@ -252,7 +252,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 		    } else if( tempButton.getActionCommand().equals( "join" ) ){
 			
 			//set up to join a game
-			theFacade.setGameMode( theDriver.CLIENTGAME );
+			theDriver.setGameMode( theDriver.CLIENTGAME );
 			
 			theDriver.createPlayer( 1, Player.NETWORKPLAYER, "UnNamedPlayer" );
 			theDriver.createPlayer( 2, Player.NETWORKPLAYER, "UnNamedPlayer" );
@@ -263,7 +263,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			    //create a URL from the IP address in the IPfield
 			    URL address = new URL( "http://" + IPField.getText() );
 			    //set the host
-			    theFacade.setHost( address );
+			    theDriver.setHost( address );
 			    
 			    //hide the Firstscreen, make and show the Second screen
 			    this.hide();
