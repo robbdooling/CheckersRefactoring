@@ -183,7 +183,7 @@ public class TestingKernel extends java.lang.Object{
         boolean basMoveTest = true;        
    
         //Find out who has control of the board.
-        int turn = testFacade.whosTurn();
+        int turn = theDriver.whosTurn();
         
         // Since game should be in initial state, make a valid, simple 
         // move.  Red goes first, so move one of their pieces.
@@ -212,7 +212,7 @@ public class TestingKernel extends java.lang.Object{
         }
                        
         // Make sure it is now the other player's turn.
-        if( turn == testFacade.whosTurn() ){
+        if( turn == theDriver.whosTurn() ){
             System.out.println( "Did not end turn correctly." );
             basMoveTest = false;
         }
@@ -235,7 +235,7 @@ public class TestingKernel extends java.lang.Object{
         boolean boundaryTest = true;          
         
         //Find out who has control of the board.
-        int turn = testFacade.whosTurn();
+        int turn = theDriver.whosTurn();
         
         // The pieces should be in these locations.
         // Attempt to make a move with an out of bounds end location.
@@ -255,7 +255,7 @@ public class TestingKernel extends java.lang.Object{
             boundaryTest = false; 
         }
                 
-        if( turn != testFacade.whosTurn() ){ 
+        if( turn != theDriver.whosTurn() ){ 
             System.out.println( "Prematurely ended turn." );
             boundaryTest = false; 
         }
@@ -276,7 +276,7 @@ public class TestingKernel extends java.lang.Object{
         
         // Find out who has control of the board.
         // Should be the same as the last test.
-        int turn = testFacade.whosTurn();
+        int turn = theDriver.whosTurn();
         
         // Position the pieces to where necessary.
         System.out.println( "Attempting move: 40 to 33" );
@@ -284,7 +284,7 @@ public class TestingKernel extends java.lang.Object{
         testFacade.selectSpace( 33 );
                
         //Attempt to make a move which is not the forced jump.
-        turn = testFacade.whosTurn();
+        turn = theDriver.whosTurn();
         System.out.println( "Attempting move: 26 to 35" );
         testFacade.selectSpace( 26 );
         testFacade.selectSpace( 35 );
@@ -299,7 +299,7 @@ public class TestingKernel extends java.lang.Object{
             forceJumpTest = false;
         }
         
-        if( turn != testFacade.whosTurn() ){ forceJumpTest = false; }
+        if( turn != theDriver.whosTurn() ){ forceJumpTest = false; }
                 
         // Now make the jump and check that the pieces have been 
         // moved/removed correctly.
@@ -323,7 +323,7 @@ public class TestingKernel extends java.lang.Object{
         }
         
         // Control should be turned over.  Check for that.
-        if( turn == testFacade.whosTurn() ){ 
+        if( turn == theDriver.whosTurn() ){ 
             System.out.println( "Did not end turn correctly." );
             forceJumpTest = false; 
         }
@@ -391,7 +391,7 @@ public class TestingKernel extends java.lang.Object{
         // All of that should set the stage for a multiple jump.
         // Make the first jump and then check for control of the board.
         // And location of pieces.  Control should not have changed.
-        int turn = testFacade.whosTurn();
+        int turn = theDriver.whosTurn();
         
         System.out.println( "Attempting move: 35 to 21" );
         testFacade.selectSpace( 35 );
@@ -408,7 +408,7 @@ public class TestingKernel extends java.lang.Object{
             multJumpTest = false;
         }
         
-        if( turn != testFacade.whosTurn() ){
+        if( turn != theDriver.whosTurn() ){
             System.out.println( "Prematurely ended turn." );
             multJumpTest = false;
         }
@@ -432,7 +432,7 @@ public class TestingKernel extends java.lang.Object{
             multJumpTest = false;
         }
         
-        if( turn == testFacade.whosTurn() ){
+        if( turn == theDriver.whosTurn() ){
             System.out.println( "Did not end turn correctly." );
             multJumpTest = false;
         }
@@ -449,7 +449,7 @@ public class TestingKernel extends java.lang.Object{
         // Boolean for whether or not it passed the test.
         boolean invMoveTest = true;        
         
-        int turn = testFacade.whosTurn();
+        int turn = theDriver.whosTurn();
         
         // Test that it doesn't allow you to make a move with
         // the same starting and endling location.
@@ -466,7 +466,7 @@ public class TestingKernel extends java.lang.Object{
             System.out.println( "Incorrectly removed piece from 23." );
             invMoveTest = false;
         }
-        if( turn != testFacade.whosTurn() ){
+        if( turn != theDriver.whosTurn() ){
             System.out.println( "Prematurely ended turn." );
             invMoveTest = false;   
         }
@@ -485,7 +485,7 @@ public class TestingKernel extends java.lang.Object{
             System.out.println( "Incorrectly removed piece from 8" );
             invMoveTest = false;
         }
-        if( turn != testFacade.whosTurn() ){
+        if( turn != theDriver.whosTurn() ){
             System.out.println( "Prematurely ended turn." );
             invMoveTest = false;   
         }   
@@ -512,7 +512,7 @@ public class TestingKernel extends java.lang.Object{
         }
         
         // Control of the board should not have changed.
-        if( turn != testFacade.whosTurn() ){
+        if( turn != theDriver.whosTurn() ){
             System.out.println( "Ended turn prematurely." );
             invMoveTest = false;   
         }
@@ -537,7 +537,7 @@ public class TestingKernel extends java.lang.Object{
         
         // Control of the board should not have changed.
         System.out.println( "Prematurely ended turn." );
-        if( turn != testFacade.whosTurn() ){
+        if( turn != theDriver.whosTurn() ){
             invMoveTest = false;   
         }
         
@@ -560,7 +560,7 @@ public class TestingKernel extends java.lang.Object{
         }
         
         // Control of the board should not have changed.
-        if( turn != testFacade.whosTurn() ){
+        if( turn != theDriver.whosTurn() ){
             System.out.println( "Ended turn prematurely" );
             invMoveTest = false;   
         }
@@ -585,7 +585,7 @@ public class TestingKernel extends java.lang.Object{
         }
             
         // Control of the board should have changed.
-        if( turn == testFacade.whosTurn() ){
+        if( turn == theDriver.whosTurn() ){
             System.out.println( "Did not end turn correctly. " );
             invMoveTest = false;   
         }   

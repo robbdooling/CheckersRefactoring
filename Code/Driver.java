@@ -72,6 +72,23 @@ public class Driver {
     }
     
     /**
+     * Return an int indicating which player's turn it is.
+     * ( e.g. 1 for player 1 )
+     *
+     * @return int   The number of the player whose turn it is.
+     * 
+     * @pre game is in progress
+     */
+    public int whosTurn(){
+	
+	// Return the integer value of the activePlayer object
+	int turn;
+	turn = activePlayer.getNumber();
+	
+	return turn;
+    }
+    
+    /**
      * This method is called after a move has been checked. 
      * Changes active player when a final succesful jump has 
      * been made, resets the timer when appropriate, and tells 

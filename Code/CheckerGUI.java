@@ -1334,11 +1334,11 @@ public class CheckerGUI extends JFrame implements ActionListener{
 	}
 	
 	//this code updates whos turn it is
-	if(theFacade.whosTurn() == 2 ){
+	if(theDriver.whosTurn() == 2 ){
 	    playerTwoLabel.setForeground( Color.red );
 	    PlayerOnelabel.setForeground(Color.black );
 	    whosTurnLabel.setText( playerTwosName + "'s turn ");
-	}else if( theFacade.whosTurn() == 1 ){
+	}else if( theDriver.whosTurn() == 1 ){
 	    PlayerOnelabel.setForeground( Color.red );
 	    playerTwoLabel.setForeground(Color.black );
 	    whosTurnLabel.setText( playerOnesName + "'s turn" );

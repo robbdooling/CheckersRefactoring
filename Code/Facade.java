@@ -59,23 +59,6 @@ public class Facade extends Component {
     }
     
     /**
-     * Return an int indicating which player's turn it is.
-     * ( e.g. 1 for player 1 )
-     *
-     * @return int   The number of the player whose turn it is.
-     * 
-     * @pre game is in progress
-     */
-    public int whosTurn(){
-	
-	// Return the integer value of the activePlayer object
-	int turn;
-	turn = activePlayer.getNumber();
-	
-	return turn;
-    }
-    
-    /**
      * Set which player's turn it is.
      * 
      * @param active  The active player
