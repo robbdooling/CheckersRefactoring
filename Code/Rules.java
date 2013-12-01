@@ -23,6 +23,7 @@ import java.awt.*;
  * @author
  * @author
  * 
+ * @deprecated This class is replaced by {@link RuleSet}
  */
 public class Rules {
     
@@ -45,6 +46,7 @@ public class Rules {
      *
      * @param board - the checker board.
      * @param driver - the main driver of the program.
+     * @deprecated This class is replaced by {@link RuleSet}
      */
     public Rules( Board board, Driver driver ) {
 	
@@ -64,6 +66,8 @@ public class Rules {
      * 
      *  @pre a player has made a move
      *  @post the player knows if the move has legal
+     *  
+     *  @deprecated Use {@link Piece#validateMove(Move)} instead
      */
     public boolean validateMove( Move move ) {
         
