@@ -84,7 +84,7 @@ public class Firstscreen extends JFrame implements ActionListener{
         );
         
 	gameModes.add(LocalGameButton);
-        gameModes.add(HostGameButton);
+	gameModes.add(HostGameButton);
 	gameModes.add(JoinGameButton);
 		
 	LocalGameButton.setActionCommand("local");

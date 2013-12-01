@@ -106,7 +106,7 @@ public class TestingKernel extends java.lang.Object{
             theDriver.setTimer( testTime, ( testTime/2 ) );
         
             //Start the game.
-            testFacade.startGame();
+            theDriver.startGame();
             
         }catch( Exception e ){
             System.err.println( e.getMessage() );

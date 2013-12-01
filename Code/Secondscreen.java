@@ -323,7 +323,7 @@ public class Secondscreen extends JFrame
 		}
 		
 		//start the game
-		theFacade.startGame();
+		theDriver.startGame();
 		//hide this screen, make and show the GUI
 		this.hide();
 		CheckerGUI GUI = new CheckerGUI( theFacade, theFacade.getPlayerName( 1 ),

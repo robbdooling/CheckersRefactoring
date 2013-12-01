@@ -299,12 +299,6 @@ public class Facade extends Component {
 	return theBoard;
     }
     
-    /**
-     * Call the driver and begin the game.
-     */
-    public void startGame(){
-	theDriver.startGame();
-    }
     
     /**
      * Generates an action. This is inhereted from Component
