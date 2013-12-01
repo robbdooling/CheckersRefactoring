@@ -42,8 +42,12 @@ public class Driver {
     private Timer   theTimer;
     private Facade  theFacade;
     private Rules   theRules;
+<<<<<<< HEAD
+    private int	    warningTime = 999;
+=======
     private int	    warningTime = 999;
     private Board    theBoard;
+>>>>>>> 225589fbaebf46366b42f4441bc60c4c509d1284
     
     /**
      * Constructor

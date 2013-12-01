@@ -225,6 +225,34 @@ public class Facade extends Component {
 	//Adds an action listener to the facade
     }
     
+<<<<<<< HEAD
+=======
+    /**
+     * Called when both players have clicked OK on the end game dialog box
+     * 
+     * @post the game has ended 
+     */
+    public void endGameAccepted(){
+	
+	//waits until both players have accepted the end of the game 
+	//end the game
+    }
+    
+<<<<<<< HEAD
+    /**
+     * Notifies everything of the sta eof the board
+     * 
+     * @return a Board object which is the state of the board
+     * 
+     */
+    public Board stateOfBoard(){
+	// Return the board so GUI can go through and update itself
+	return theBoard;
+    }
+    
+=======
+>>>>>>> 225589fbaebf46366b42f4441bc60c4c509d1284
+>>>>>>> e807d5069035fbff6d6d49a442bf52cd0cb3a10a
     
     /**
      * Generates an action. This is inhereted from Component

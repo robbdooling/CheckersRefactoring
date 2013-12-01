@@ -231,7 +231,11 @@ public class Firstscreen extends JFrame implements ActionListener{
 			
 			//hide the Firstscreen, make a Secondscreen and show it
 			this.hide();
+<<<<<<< HEAD
+			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME, 					theDriver );
+=======
 			next = new Secondscreen( theFacade, this, theDriver.LOCALGAME, 					theDriver );
+>>>>>>> 225589fbaebf46366b42f4441bc60c4c509d1284
 			next.show();
 			
 			//if the host game button is selected
@@ -245,7 +249,11 @@ public class Firstscreen extends JFrame implements ActionListener{
 			
 			//hide the Firstscreen, make the Secondscreen and show it
 			this.hide();
+<<<<<<< HEAD
+			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME, 					theDriver );
+=======
 			next = new Secondscreen( theFacade, this, theDriver.HOSTGAME, 					theDriver );
+>>>>>>> 225589fbaebf46366b42f4441bc60c4c509d1284
 			next.show();
 			
 			//if the join game button is selected
