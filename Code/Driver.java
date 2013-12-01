@@ -249,6 +249,17 @@ public class Driver {
 	}
 	
     }
+
+    /**
+     * Tell the kernel that the user has requested a draw.
+     */
+    public void pressDraw(){
+
+	// Alerts both players and the kernel that one person 
+	// has offered a draw calls offerDraw() on both players
+	activePlayer.offerDraw( activePlayer );
+
+    }
     
     /** 
      * The offer for a draw has been made.  This method declines
