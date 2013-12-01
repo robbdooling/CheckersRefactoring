@@ -38,6 +38,7 @@ public class Driver {
     private Timer   theTimer;
     private Facade  theFacade;
     private Rules   theRules;
+    private int	    warningTime = 999;
     
     /**
      * Constructor
@@ -276,17 +277,22 @@ public class Driver {
      * @post The timer has been created and the appropriate time 
      *       restraints are in place
      */
-    public void setTimer( int time, int warning ){
+    public void setTimer( int time, int warning ) throws Exception{
+	// Checks to see that time is in between the necessary frame
    	// If values are negative, set runningTimer to false
 	// If they are positive values, create the Timer and 
 	// notifier with the times
-
-	if ( time < 0 ) {
-	    runningTimer = false;
-	} else {
-	    runningTimer = true;
-	    theTimer = new Timer();
-	}
+       if( ( time == -1 ) || ( ( time >= 10 || time <= 300 ) 
+				&& ( warning >= 10 || warning <= 300 ) ) ){
+	    if ( time < 0 ) {
+	         runningTimer = false;
+	    } else {
+	         runningTimer = true;
+	         theTimer = new Timer();
+	    }
+       } else {
+		throw new Exception( "Invalid timer settings" );
+       }
         
     }
         
@@ -428,5 +434,46 @@ public class Driver {
 	
 	return timer;
     }
+
+    /**
+     * Returns the timer value, how long each player get to take a turn
+     * 
+     * @return the amount of time each player has for a turn 
+     * 
+     * @pre there has been a timer set for the current game
+     * 
+     */
+    public int getTimer(){
+	int retval = 0;
+
+	// Makes sure there is a timer for this game
+	if( timerRunning() ){
+	    retval = theTimer.getTime();
+	}
+
+	// Returns the timer value
+	return retval;
+    }
+
+    /**
+     * Returns the amount of time chosen for a warning that a player is 
+     * near the end of his/her turn.
+     * 
+     * @return the amount of warning time a player has
+     * 
+     * @pre there has been a timer set for the current game  
+     */
+    public int getTimerWarning(){
+	int retval = -1;
+
+	// Makes sure there is a timer for this game
+	if( warningTime != 999 ){
+	    retval = warningTime;
+	}
+
+	// Returns the timer value (clas variable: warningTime )
+	return retval;
+    }
+    
     
 }//Driver.java

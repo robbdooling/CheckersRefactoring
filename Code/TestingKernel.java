@@ -97,16 +97,16 @@ public class TestingKernel extends java.lang.Object{
             theDriver.createPlayer( 2, Player.LOCALPLAYER, playerTwo );
             
             // Set the names for the players.
-            testFacade.setPlayerName( 1, playerOne );
-            testFacade.setPlayerName( 2, playerTwo );
+            theDriver.setPlayerName( 1, playerOne );
+            theDriver.setPlayerName( 2, playerTwo );
         
             // Give a generous time.  At this point, it will allow 
             // adequate time for this program to run, but perform a 
             // basic test on the timer.
-            testFacade.setTimer( testTime, ( testTime/2 ) );
+            theDriver.setTimer( testTime, ( testTime/2 ) );
         
             //Start the game.
-            testFacade.startGame();
+            theDriver.startGame();
             
         }catch( Exception e ){
             System.err.println( e.getMessage() );
@@ -132,7 +132,7 @@ public class TestingKernel extends java.lang.Object{
         report( passedTest, "Sets Player Two name", 3 );
         
         // The Timer.
-        passedTest = ( testTime == testFacade.getTimer() );
+        passedTest = ( testTime == theDriver.getTimer() );
         report( passedTest, "Sets Timer", 4 );
                
         // These are intended to run in succession.  So pieces are assumed

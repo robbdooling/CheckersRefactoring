@@ -24,6 +24,7 @@ import java.awt.*;
 public class Firstscreen extends JFrame implements ActionListener{
 
     Facade theFacade;
+    Driver theDriver;
     Secondscreen next;
   
     // Variables declaration - do not modify
@@ -46,10 +47,11 @@ public class Firstscreen extends JFrame implements ActionListener{
      *     
      */
 
-    public Firstscreen( Facade facade ) {
+    public Firstscreen( Facade facade, Driver driver ) {
 
 	super( "First screen" );
         theFacade = facade;
+	theDriver = driver;
         initComponents();
         pack();
     }
@@ -82,7 +84,7 @@ public class Firstscreen extends JFrame implements ActionListener{
         );
         
 	gameModes.add(LocalGameButton);
-        gameModes.add(HostGameButton);
+	gameModes.add(HostGameButton);
 	gameModes.add(JoinGameButton);
 		
 	LocalGameButton.setActionCommand("local");
@@ -229,7 +231,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			
 			//hide the Firstscreen, make a Secondscreen and show it
 			this.hide();
-			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME );
+			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME, 					theDriver );
 			next.show();
 			
 			//if the host game button is selected
@@ -243,7 +245,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			
 			//hide the Firstscreen, make the Secondscreen and show it
 			this.hide();
-			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME );
+			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME, 					theDriver );
 			next.show();
 			
 			//if the join game button is selected
@@ -265,7 +267,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			    
 			    //hide the Firstscreen, make and show the Second screen
 			    this.hide();
-			    next = new Secondscreen( theFacade, this, theFacade.CLIENTGAME );
+			    next = new Secondscreen( theFacade, this, theFacade.CLIENTGAME, 					theDriver );
 			    next.show();
                                         
 			    //catch any exceptions
