@@ -1148,7 +1148,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
      * 
      */
     private void exitForm(java.awt.event.WindowEvent evt) {
-        theFacade.pressQuit();
+        theDriver.endInQuit(theDriver.getActivePlayer());
         
     }
 
@@ -1207,7 +1207,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 		//if resign is pressed
 	    }else if( e.getActionCommand().equals( "resign" ) ) {
 		//does sequence of events for a resign
-		theFacade.pressQuit();
+		theDriver.endInQuit(theDriver.getActivePlayer());
 		
 		//if the source came from the facade
 	    }else if( e.getSource().equals( theFacade ) ) {
@@ -1365,7 +1365,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 	    } else if ( timeRemaining <= 0 &&
 			!( warningLabel.getText() ).equals( "" ) ) {
                   
-		theFacade.pressQuit();
+		theDriver.endInQuit(theDriver.getActivePlayer());
                     
 	    } else {
                     

@@ -133,6 +133,13 @@ public class Driver {
 	}
 	
     }
+
+    /**
+     * This method returns the currently active player.
+     */
+    public Player getActivePlayer(){
+             return activePlayer;
+    }
     
     /**
      * This method ends the checkers game due to whatever reason neccessary
@@ -250,7 +257,7 @@ public class Driver {
      * @param player The player declining the draw.
      */
     public void declineDraw( Player player ){
-	if ( gameType == theFacade.LOCALGAME ) {
+	if ( gameType == LOCALGAME ) {
 	    player.endInDeclineDraw( player );
 	} else {
 	    playerOne.endInDeclineDraw( player );
