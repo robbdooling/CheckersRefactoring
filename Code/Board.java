@@ -25,6 +25,7 @@ import java.awt.*;
 public class Board {
 
    private Piece pieces[]; // the pieces that are on the board
+   
    // These will probably be removed later
    public static int SINGLE = 0;
    public static int KING = 1;
@@ -42,32 +43,32 @@ public class Board {
 	   pieces = new Piece[64];
 
 	   // create blue pices
-	   pieces[1] = new SinglePiece( Color.blue, 1, this );
-	   pieces[3] = new SinglePiece( Color.blue, 3, this );
-	   pieces[5] = new SinglePiece( Color.blue, 5, this );
-	   pieces[7] = new SinglePiece( Color.blue, 7, this );
-	   pieces[8] = new SinglePiece( Color.blue, 8, this );
-	   pieces[10] = new SinglePiece( Color.blue, 10, this );
-	   pieces[12] = new SinglePiece( Color.blue, 12, this );
-	   pieces[14] = new SinglePiece( Color.blue, 14, this );
-	   pieces[17] = new SinglePiece( Color.blue, 17, this );
-	   pieces[19] = new SinglePiece( Color.blue, 19, this );
-	   pieces[21] = new SinglePiece( Color.blue, 21, this );
-	   pieces[23] = new SinglePiece( Color.blue, 23, this );
+	   pieces[1] = new Piece( Color.blue, 1, this );
+	   pieces[3] = new Piece( Color.blue, 3, this );
+	   pieces[5] = new Piece( Color.blue, 5, this );
+	   pieces[7] = new Piece( Color.blue, 7, this );
+	   pieces[8] = new Piece( Color.blue, 8, this );
+	   pieces[10] = new Piece( Color.blue, 10, this );
+	   pieces[12] = new Piece( Color.blue, 12, this );
+	   pieces[14] = new Piece( Color.blue, 14, this );
+	   pieces[17] = new Piece( Color.blue, 17, this );
+	   pieces[19] = new Piece( Color.blue, 19, this );
+	   pieces[21] = new Piece( Color.blue, 21, this );
+	   pieces[23] = new Piece( Color.blue, 23, this );
 
 	   // create the white pieces
-	   pieces[40] = new SinglePiece( Color.white, 40, this );
-	   pieces[42] = new SinglePiece( Color.white, 42, this );
-	   pieces[44] = new SinglePiece( Color.white, 44, this );
-	   pieces[46] = new SinglePiece( Color.white, 46, this );
-	   pieces[49] = new SinglePiece( Color.white, 49, this );
-	   pieces[51] = new SinglePiece( Color.white, 51, this );
-	   pieces[53] = new SinglePiece( Color.white, 53, this );
-	   pieces[55] = new SinglePiece( Color.white, 55, this );
-	   pieces[56] = new SinglePiece( Color.white, 56, this );
-	   pieces[58] = new SinglePiece( Color.white, 58, this );
-	   pieces[60] = new SinglePiece( Color.white, 60, this );
-	   pieces[62] = new SinglePiece( Color.white, 62, this );
+	   pieces[40] = new Piece( Color.white, 40, this );
+	   pieces[42] = new Piece( Color.white, 42, this );
+	   pieces[44] = new Piece( Color.white, 44, this );
+	   pieces[46] = new Piece( Color.white, 46, this );
+	   pieces[49] = new Piece( Color.white, 49, this );
+	   pieces[51] = new Piece( Color.white, 51, this );
+	   pieces[53] = new Piece( Color.white, 53, this );
+	   pieces[55] = new Piece( Color.white, 55, this );
+	   pieces[56] = new Piece( Color.white, 56, this );
+	   pieces[58] = new Piece( Color.white, 58, this );
+	   pieces[60] = new Piece( Color.white, 60, this );
+	   pieces[62] = new Piece( Color.white, 62, this );
 
    }
 
@@ -108,14 +109,13 @@ public class Board {
    }
 
    public int movePiece(Move move) {
-	// TODO Consider jumping moves
-        Piece p = piece[move.getPiece().getLocation()];
-	piece[p.getLocation()] = null;
-	piece[move.endingLocation()] = p;
-
-	p.move(move.getLocation());
-	
-	return 0; // This is only 0 so that nothing breaks while we refactor
+        Piece p = pieces[move.getPiece().getLocation()];
+    	pieces[p.getLocation()] = null;
+    	pieces[move.endLocation()] = p;
+    
+    	p.move(move.endLocation());
+    	
+    	return 0; // This is only 0 so that nothing breaks while we refactor
    }
 
    /**
