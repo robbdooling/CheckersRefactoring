@@ -288,17 +288,6 @@ public class Facade extends Component {
 	//end the game
     }
     
-    /**
-     * Notifies everything of the sta eof the board
-     * 
-     * @return a Board object which is the state of the board
-     * 
-     */
-    public Board stateOfBoard(){
-	// Return the board so GUI can go through and update itself
-	return theBoard;
-    }
-    
     
     /**
      * Generates an action. This is inhereted from Component
@@ -323,21 +312,6 @@ public class Facade extends Component {
 	    actionListener.actionPerformed( 
               new ActionEvent( this, ActionEvent.ACTION_PERFORMED, command ) );
 	    // Fires an event associated with timer, or move made on GUI
-	}
-    }
-    
-    /**
-     * Create a player with the given type and player number.
-     *
-     * @param num  Int for player number (either 1 or 2)
-     * @param type Int for type of player (Local, network, etc.)
-     */
-    public void createPlayer( int num, int type ) {
-
-	if ( type == HOSTGAME || type == CLIENTGAME ) {
-	    theDriver.createPlayer( num, Player.NETWORKPLAYER, "UnNamedPlayer" );
-	} else {
-	    theDriver.createPlayer( num, Player.LOCALPLAYER, "UnNamedPlayer" );
 	}
     }
 

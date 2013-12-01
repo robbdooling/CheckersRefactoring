@@ -28,6 +28,10 @@ import javax.swing.*;
  */
 
 public class Driver {
+
+    public static int LOCALGAME  = 10000;
+    public static int HOSTGAME   = 20000;
+    public static int CLIENTGAME = 30000;
     
     private Player  playerOne;
     private Player  playerTwo;
@@ -39,6 +43,7 @@ public class Driver {
     private Facade  theFacade;
     private Rules   theRules;
     private int	    warningTime = 999;
+    private Board    theBoard;
     
     /**
      * Constructor
@@ -48,7 +53,7 @@ public class Driver {
      */
     public Driver(){
 	// Create the board       
-	Board theBoard = new Board();
+	theBoard = new Board();
 	
 	// Create the rules passing in the board
 	theRules = new Rules( theBoard, this );
@@ -103,15 +108,15 @@ public class Driver {
 		
 		// If game is networked tell networked player to send 
 		// the move
-		if ( gameType == theFacade.HOSTGAME 
-		     || gameType == theFacade.CLIENTGAME ) {
+		if ( gameType == HOSTGAME 
+		     || gameType == CLIENTGAME ) {
 		    ( (NetworkPlayer) activePlayer ).sendMove();
 		}
 	    }
 	} else if ( passivePlayer == player ) {
 	    // If game is networked, tell networked player to send move
-	    if ( gameType == theFacade.HOSTGAME 
-		 || gameType == theFacade.CLIENTGAME ) {
+	    if ( gameType == HOSTGAME 
+		 || gameType == CLIENTGAME ) {
 		((NetworkPlayer)activePlayer).sendMove();
 		((NetworkPlayer)activePlayer).waitForPlayer();
 	    }
@@ -374,6 +379,17 @@ public class Driver {
     public Player getOppositePlayer(){
    	// Returns the player whos getTurnStatus is false
    	return passivePlayer;
+    }
+
+    /**
+     * Notifies everything of the sta eof the board
+     * 
+     * @return a Board object which is the state of the board
+     * 
+     */
+    public Board stateOfBoard(){
+	// Return the board so GUI can go through and update itself
+	return theBoard;
     }
     
     /**

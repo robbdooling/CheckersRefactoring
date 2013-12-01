@@ -224,38 +224,38 @@ public class Firstscreen extends JFrame implements ActionListener{
 		    if( tempButton.getActionCommand().equals( "local" ) ){
 			
 			//set up a local game
-			theFacade.setGameMode( theFacade.LOCALGAME );
+			theFacade.setGameMode( theDriver.LOCALGAME );
 			
-			theFacade.createPlayer( 1, theFacade.LOCALGAME );
-			theFacade.createPlayer( 2, theFacade.LOCALGAME );
+			theDriver.createPlayer( 1, Player.LOCALPLAYER, "UnNamedPlayer" );
+			theDriver.createPlayer( 2, Player.LOCALPLAYER, "UnNamedPlayer" );
 			
 			//hide the Firstscreen, make a Secondscreen and show it
 			this.hide();
-			next = new Secondscreen( theFacade, this, theFacade.LOCALGAME, 					theDriver );
+			next = new Secondscreen( theFacade, this, theDriver.LOCALGAME, 					theDriver );
 			next.show();
 			
 			//if the host game button is selected
 		    } else if( tempButton.getActionCommand().equals( "host" ) ){
 			
 			//set up to host a game
-			theFacade.setGameMode( theFacade.HOSTGAME );
+			theFacade.setGameMode( theDriver.HOSTGAME );
 			
-			theFacade.createPlayer( 1, theFacade.HOSTGAME );
-			theFacade.createPlayer( 2, theFacade.HOSTGAME );
+			theDriver.createPlayer( 1, Player.NETWORKPLAYER, "UnNamedPlayer" );
+			theDriver.createPlayer( 2, Player.NETWORKPLAYER, "UnNamedPlayer" );
 			
 			//hide the Firstscreen, make the Secondscreen and show it
 			this.hide();
-			next = new Secondscreen( theFacade, this, theFacade.HOSTGAME, 					theDriver );
+			next = new Secondscreen( theFacade, this, theDriver.HOSTGAME, 					theDriver );
 			next.show();
 			
 			//if the join game button is selected
 		    } else if( tempButton.getActionCommand().equals( "join" ) ){
 			
 			//set up to join a game
-			theFacade.setGameMode( theFacade.CLIENTGAME );
+			theFacade.setGameMode( theDriver.CLIENTGAME );
 			
-			theFacade.createPlayer( 1, theFacade.CLIENTGAME );
-			theFacade.createPlayer( 2, theFacade.CLIENTGAME );
+			theDriver.createPlayer( 1, Player.NETWORKPLAYER, "UnNamedPlayer" );
+			theDriver.createPlayer( 2, Player.NETWORKPLAYER, "UnNamedPlayer" );
 			
 			//try to connect
 			try {
