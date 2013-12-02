@@ -23,7 +23,7 @@ import java.net.*;
 
 /**
  *
- * @author
+ * @author robbdooling@gmail.com
  * @version 
  */
 
@@ -118,6 +118,10 @@ public class CheckerGUI extends JFrame implements ActionListener{
 	
 	// initialize squares matrix
 	
+	 // sets the layout and adds listener for closing window
+    getContentPane().setLayout(new GridBagLayout());
+	 GridBagConstraints gridBagConstraints1;
+	
 	for (int i = 0; i < 8; i++) {
 	    for (int j = 0; j < 8; j++) {
 		allSquares[i][j] = new JButton();
@@ -156,10 +160,6 @@ public class CheckerGUI extends JFrame implements ActionListener{
 		
         DrawButton = new JButton();
         DrawButton.addActionListener( this );
-	      
-        //sets the layout and adds listener for closing window
-        getContentPane().setLayout(new GridBagLayout());
-	GridBagConstraints gridBagConstraints1;
     
 	//add window listener
 	addWindowListener(new WindowAdapter() {
