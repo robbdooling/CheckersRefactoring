@@ -157,6 +157,20 @@ public class Driver {
     public Player getActivePlayer(){
              return activePlayer;
     }
+
+    /**
+     * This method returns player1.
+     */
+    public Player getPlayer1(){
+              return playerOne;
+    }
+
+    /**
+     * This method returns player2.
+     */
+    public Player getPlayer2(){
+              return playerTwo;
+    }
     
     /**
      * This method ends the checkers game due to whatever reason neccissary

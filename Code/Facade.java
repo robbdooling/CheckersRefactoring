@@ -128,39 +128,7 @@ public class Facade extends Component {
 	
     }
     
-    /**
-     * Given a player number, returns the name associated 
-     * with that number.
-     * 
-     * @param  playerNum the number of a player
-     * @return string    the name associated with playerNum
-     *
-     * @pre playerNum is a valid player number
-     */
-    public String getPlayerName( int playerNum ){
-	String retString = null;
-	
-	try{
-	    // Checks to see that playerNum is valid
-	    if( playerNum == 1 || playerNum == 2 ){
-		// checks both Player objects to see which one is 
-		// associated with the legal number returns the name of 
-                // the player asscociated with the number
-		if( activePlayer.getNumber() == playerNum ){
-		    retString = activePlayer.getName();
-		}else{
-		    retString = passivePlayer.getName();
-		}
-	    }		   
-	}catch( Exception e ){
-	    
-	    System.out.println( e.getMessage() );
-	  
-	    // If playerNum is illegal an exception will be thrown
-	}
 
-	return retString;
-    }
     
     
     /**

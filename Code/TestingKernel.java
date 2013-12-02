@@ -124,11 +124,11 @@ public class TestingKernel extends java.lang.Object{
         
         // Test that it correctly set the initial values correctly.
         // Player One's Name
-        passedTest = playerOne.equals( testFacade.getPlayerName( 1 ) );
+        passedTest = playerOne.equals( theDriver.getPlayer1().getName() );
         report( passedTest, "Sets Player One name", 3 );
   
         // Player Two's Name
-        passedTest = playerTwo.equals( testFacade.getPlayerName( 2 ) );
+        passedTest = playerTwo.equals( theDriver.getPlayer2().getName() );
         report( passedTest, "Sets Player Two name", 3 );
         
         // The Timer.

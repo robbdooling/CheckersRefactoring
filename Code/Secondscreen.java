@@ -269,7 +269,7 @@ public class Secondscreen extends JFrame
     
     /**
      * This takes care of when an action takes place. It will check the 
-     * action command of all components and then deicde what needs to be done.
+     * action command of all components and then decide what needs to be done.
      * 
      * @param the event fired
      */
@@ -326,8 +326,8 @@ public class Secondscreen extends JFrame
 		theDriver.startGame();
 		//hide this screen, make and show the GUI
 		this.hide();
-		CheckerGUI GUI = new CheckerGUI( theFacade, theFacade.getPlayerName( 1 ),
-						 theFacade.getPlayerName( 2 ), theDriver );
+		CheckerGUI GUI = new CheckerGUI( theFacade, playerOneField.getText(),
+						 playerTwoField.getText(), theDriver );
 		GUI.show();
 		
 		//if they hit cancel go to the previous screen
