@@ -19,7 +19,7 @@ import javax.swing.*;
  *
  * This class is a part of the main functionality of the checkers 
  * game. This class contains the main method to start the game, it 
- * creates all necessary classes as informaton is provided. Its 
+ * creates all necessary classes as information is provided. Its 
  * functions include knowing whose turn it is, remembering multiple 
  * jumps, relaying end of game conditions and ending the game.
  *
@@ -90,9 +90,9 @@ public class Driver {
     
     /**
      * This method is called after a move has been checked. 
-     * Changes active player when a final succesful jump has 
+     * Changes active player when a final successful jump has 
      * been made, resets the timer when appropriate, and tells 
-     * the appropriate player whos turn it is to make a move.
+     * the appropriate player whose turn it is to make a move.
      *
      * @param player The player whose turn it will now be
      * @param space  The space on the board from which a multiple 
@@ -109,7 +109,7 @@ public class Driver {
 	if ( activePlayer == player ){
 	    
 	    // Inform the player that the move was not valid,
-	    // or to make antoher jump
+	    // or to make another jump
 	    if ( space < 0 ){
 		JOptionPane.showMessageDialog( null,
 	       	       activePlayer.getName() + " made an illegal move",
@@ -139,7 +139,7 @@ public class Driver {
 	    }
 	    
 	    // Inform the other player to make a move and
-	    // tell facade to update any listining GUIs and
+	    // tell facade to update any listening GUIs and
 	    // reset the timer
 	    
 	    Player tempHold = activePlayer;
@@ -159,7 +159,7 @@ public class Driver {
     }
     
     /**
-     * This method ends the checkers game due to whatever reason neccessary
+     * This method ends the checkers game due to whatever reason neccissary
      * ie. a draw, someone quitting, or a victory.
      *
      * @param message  the message to send to all players regarding the 
@@ -359,7 +359,7 @@ public class Driver {
      * This method will start the game play. Letting the first person 
      * move their piece and so on
      *
-     * @pre  There are 2 players to play, and all pregame conditions are 
+     * @pre  There are 2 players to play, and all pre-game conditions are 
      *       in place
      * @post The first person is able to make their first move
      */
@@ -406,7 +406,7 @@ public class Driver {
     }
     
     /**
-     * Return the player whos turn it is not
+     * Return the player whose turn it is not
      *
      * @return the player whose turn it is not
      *
@@ -414,12 +414,12 @@ public class Driver {
      * @post this method has not altered anything
      */
     public Player getOppositePlayer(){
-   	// Returns the player whos getTurnStatus is false
+   	// Returns the player whose getTurnStatus is false
    	return passivePlayer;
     }
 
     /**
-     * Notifies everything of the sta eof the board
+     * Notifies everything of the state of the board
      * 
      * @return a Board object which is the state of the board
      * 
@@ -433,7 +433,7 @@ public class Driver {
     /**
      * Whether the current game uses a timer
      *
-     * @return true if a timer is being sed in the game, otherwise 
+     * @return true if a timer is being set in the game, otherwise 
      *         false
      *
      * @pre the game has started 
@@ -529,7 +529,7 @@ public class Driver {
 	    retval = warningTime;
 	}
 
-	// Returns the timer value (clas variable: warningTime )
+	// Returns the timer value (class variable: warningTime )
 	return retval;
     }
     

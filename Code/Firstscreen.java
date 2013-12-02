@@ -193,7 +193,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 
 	/**
 	 * This takes care of when an action takes place. It will check the 
-	 * action command of all components and then deicde what needs to be done.
+	 * action command of all components and then decice what needs to be done.
 	 *
 	 * @param e the event that has been fired
 	 * 
@@ -213,7 +213,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 
 		    //this next if statement takes care of when the 
 		    //OK button is selected and goes to the second 
-		    //screen settign the desired options          
+		    //screen setting the desired options          
 
 		}else if( ( e.getActionCommand() ).equals( "ok" ) ){
 		    
@@ -267,7 +267,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			    
 			    //hide the Firstscreen, make and show the Second screen
 			    this.hide();
-			    next = new Secondscreen( theFacade, this, theFacade.CLIENTGAME, 					theDriver );
+			    next = new Secondscreen( theFacade, this, theDriver.CLIENTGAME, 					theDriver );
 			    next.show();
                                         
 			    //catch any exceptions

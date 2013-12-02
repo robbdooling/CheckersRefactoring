@@ -114,7 +114,7 @@ public class TestingKernel extends java.lang.Object{
     }
     
     /**
-     * Tests the intial values, then call the other methods.
+     * Tests the initial values, then call the other methods.
      *
      * Handles the reporting of the results.
      */

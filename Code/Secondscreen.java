@@ -53,7 +53,7 @@ public class Secondscreen extends JFrame
      * Creates new Secondscreen 
      *
      *@param f the facade getting passed to to set options
-     *@param first the Firstscreen object that ceated this window
+     *@param first the Firstscreen object that created this window
      *@param type the type of game 
      * 
      */
@@ -357,7 +357,7 @@ public class Secondscreen extends JFrame
      * 
      * Exit the Application 
      *
-     * @param evt the action that tells the window to close
+     * @param event the action that tells the window to close
      * 
      */
     

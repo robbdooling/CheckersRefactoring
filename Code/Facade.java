@@ -24,10 +24,6 @@ import java.net.*;
 
 public class Facade extends Component {
 
-    public static int LOCALGAME  = 10000;
-    public static int HOSTGAME   = 20000;
-    public static int CLIENTGAME = 30000;
-
     public static String update       = "update";
     public static String playerSwitch = "switch";
     public static String ID           = "facade";
@@ -177,7 +173,7 @@ public class Facade extends Component {
     
     
     /**
-     * Generates an action. This is inhereted from Component
+     * Generates an action. This is inherited from Component
      * 
      */    
     public void generateActionPerformed(){
@@ -191,7 +187,7 @@ public class Facade extends Component {
     }
     
     /**
-     * Generates an action. This is inhereted from Componen
+     * Generates an action. This is inherited from Component
      */    
     private void generateActionPerformed( String command ){
 	

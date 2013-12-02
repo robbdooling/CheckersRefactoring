@@ -108,7 +108,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
     /**
      * This method is called from within the constructor to
      * initialize the form. It initializes the components
-     * adds the buttons to the Vecotr of squares and adds
+     * adds the buttons to the Vector of squares and adds
      * an action listener to the components 
      *
      */
@@ -251,7 +251,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
     /**
      * Takes care of input from users, handles any actions performed
      *
-     * @param e  the event that has occured
+     * @param e  the event that has occurred
      */
     
     public void actionPerformed( ActionEvent e ) {
@@ -339,7 +339,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 
     /**
      * Updates the GUI reading the pieces in the board
-     * Puts pieces in correct spaces, updates whos turn it is
+     * Puts pieces in correct spaces, updates whose turn it is
      *
      * @param the board
      */
@@ -385,7 +385,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 			//show a blue king piece in that spot board
 			temp= (JButton)possibleSquares.get(i);
 
-			//get the picture formt the web
+			//get the picture from the web
 			try{
 			    temp.setIcon(
 			      new ImageIcon(new URL("file:BlueKing.gif") ) );
@@ -420,7 +420,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 			      new ImageIcon(new URL("file:WhiteKing.gif") ) );
 			}catch( Exception e ){}
 		    }
-                                //if there isnt a piece there        
+                                //if there isn't a piece there        
 		}
 	    }else {
 		//show no picture
