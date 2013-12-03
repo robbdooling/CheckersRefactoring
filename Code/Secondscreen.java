@@ -326,13 +326,9 @@ public class Secondscreen extends JFrame
 		theDriver.startGame();
 		//hide this screen, make and show the GUI
 		this.hide();
-<<<<<<< HEAD
-		CheckerGUI GUI = new CheckerGUI( theFacade, playerOneField.getText(),
-						 playerTwoField.getText(), theDriver );
-=======
-		CheckerGUI GUI = new CheckerGUI( theFacade, theDriver.getPlayerOne().getName(),
-						 theDriver.getPlayerTwo().getName(), theDriver );
->>>>>>> 118ba283de4d6932ed2db4294281bc3532e677b0
+
+		CheckerGUI GUI = new CheckerGUI( theFacade, theDriver.getPlayer1().getName(), theDriver.getPlayer2().getName(), theDriver );
+
 		GUI.show();
 		
 		//if they hit cancel go to the previous screen
