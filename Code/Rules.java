@@ -91,9 +91,8 @@ public class Rules {
 	    Vector<Integer> pieces = new Vector<Integer>();
 	    Vector<Integer> tempVec = new Vector<Integer>();
 	    Vector<Integer> startVec = new Vector<Integer>();
-	    Vector<Integer> possibleJumps = checkForPossibleJumps( start, pieceType,
-	    Vector possibleJumps = checkForPossibleJumps( start, pieceType,
-							  player );
+	    Vector<Integer> possibleJumps = checkForPossibleJumps( start, pieceType, 
+	            player );
 	    // Check all pieces for jumps.
 	    //if ( player.getColor() == Color.white ) {
 		//pieces = theBoard.whitePieces(); 
