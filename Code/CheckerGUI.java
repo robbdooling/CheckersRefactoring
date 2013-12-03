@@ -58,7 +58,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
      *
      */
 
-    public CheckerGUI( String name1, String name2, Driver driver ) {
+    public CheckerGUI( Facade facade, String name1, String name2, Driver driver ) {
 
         super("Checkers");
 
@@ -78,6 +78,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
                 
         playerOnesName = nameOne;
         playerTwosName = nameTwo;
+        theFacade = facade;
         theDriver = driver;
         register();
         
@@ -95,7 +96,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
     private void register() {
 	
         try{
-	    theDriver.addActionListener( this );
+	    theFacade.addActionListener( this );
 	  
         }catch( Exception e ){
             
@@ -291,7 +292,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 		e.getActionCommand().equals( "62" ) ) {
 		
 		//call selectSpace with the button pressed
-		theDriver.selectSpace(
+		theFacade.selectSpace(
 				   Integer.parseInt( e.getActionCommand() ) );
 		
 		//if draw is pressed

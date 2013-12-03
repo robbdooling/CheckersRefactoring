@@ -34,7 +34,7 @@ import java.net.*;
  */
 public class TestingKernel extends java.lang.Object{
     // The facade that we will manipulate and interact with.
-    //public Facade theDriver;
+    public Facade testFacade;
 
     // The driver that this program needs to call
     public Driver theDriver;
@@ -46,8 +46,6 @@ public class TestingKernel extends java.lang.Object{
     public int    testTime  = 250;
     public String playerOne = "Joe";
     public String playerTwo = "Bob";
-    
-    CheckerGUI testGUI;
      
     /**
      * The main method.  
@@ -73,9 +71,9 @@ public class TestingKernel extends java.lang.Object{
      * @param aFacade The facade to manipulate in this program.
      */
     public TestingKernel( Driver aDriver ){
-        //theDriver = aFacade;
+        //testFacade = aFacade;
         theDriver  = aDriver;
-        //theDriver = theDriver.getFacade();
+        testFacade = theDriver.getFacade();
                 
         // Call the needed methods.
         setBegin();
@@ -101,8 +99,6 @@ public class TestingKernel extends java.lang.Object{
             // Set the names for the players.
             theDriver.setPlayerName( 1, playerOne );
             theDriver.setPlayerName( 2, playerTwo );
-            
-            theDriver.setPlayerModes(theDriver.getPlayer1(), theDriver.getPlayer2());
         
             // Give a generous time.  At this point, it will allow 
             // adequate time for this program to run, but perform a 
@@ -110,7 +106,6 @@ public class TestingKernel extends java.lang.Object{
             theDriver.setTimer( testTime, ( testTime/2 ) );
         
             //Start the game.
-            
             theDriver.startGame();
             
         }catch( Exception e ){
@@ -193,8 +188,8 @@ public class TestingKernel extends java.lang.Object{
         // Since game should be in initial state, make a valid, simple 
         // move.  Red goes first, so move one of their pieces.
         System.out.println( "Attempting move: 19 to 26" );
-        theDriver.selectSpace( 19 );
-        theDriver.selectSpace( 26 );
+        testFacade.selectSpace( 19 );
+        testFacade.selectSpace( 26 );
         
         // Stick in a manual wait to allow for enough time for the board
         // to be updated before calling it.  
@@ -245,8 +240,8 @@ public class TestingKernel extends java.lang.Object{
         // The pieces should be in these locations.
         // Attempt to make a move with an out of bounds end location.
         System.out.println( "Attempting move: 46 to 112" );
-        theDriver.selectSpace( 46 );
-        theDriver.selectSpace( 112 );
+        testFacade.selectSpace( 46 );
+        testFacade.selectSpace( 112 );
         
         // Get a copy of the board object to check its state.           
         simpleWait();
@@ -285,14 +280,14 @@ public class TestingKernel extends java.lang.Object{
         
         // Position the pieces to where necessary.
         System.out.println( "Attempting move: 40 to 33" );
-        theDriver.selectSpace( 40 );
-        theDriver.selectSpace( 33 );
+        testFacade.selectSpace( 40 );
+        testFacade.selectSpace( 33 );
                
         //Attempt to make a move which is not the forced jump.
         turn = theDriver.whosTurn();
         System.out.println( "Attempting move: 26 to 35" );
-        theDriver.selectSpace( 26 );
-        theDriver.selectSpace( 35 );
+        testFacade.selectSpace( 26 );
+        testFacade.selectSpace( 35 );
         
         // Piece should not have moved and control should be retained.
         simpleWait();
@@ -309,8 +304,8 @@ public class TestingKernel extends java.lang.Object{
         // Now make the jump and check that the pieces have been 
         // moved/removed correctly.
         System.out.println( "Attempting move: 26 to 40" );
-        theDriver.selectSpace( 26 );
-        theDriver.selectSpace( 40 );
+        testFacade.selectSpace( 26 );
+        testFacade.selectSpace( 40 );
         
         simpleWait();
               
@@ -354,43 +349,43 @@ public class TestingKernel extends java.lang.Object{
          */
         System.out.println( "Setting pieces to attempt mult. jump" );
         System.out.println( "Attempting move: 46 to 39" );
-        theDriver.selectSpace( 46 );
-        theDriver.selectSpace( 39 );
+        testFacade.selectSpace( 46 );
+        testFacade.selectSpace( 39 );
         simpleWait();
             
         System.out.println( "Attempting move: 23 to 30" );
-        theDriver.selectSpace( 23 );
-        theDriver.selectSpace( 30 );
+        testFacade.selectSpace( 23 );
+        testFacade.selectSpace( 30 );
         simpleWait();
             
         System.out.println( "Attempting move: 42 to 35" );
-        theDriver.selectSpace( 42 );
-        theDriver.selectSpace( 35 );
+        testFacade.selectSpace( 42 );
+        testFacade.selectSpace( 35 );
         simpleWait();
             
         System.out.println( "Attempting move: 14 to 23" );
-        theDriver.selectSpace( 14 );
-        theDriver.selectSpace( 23 );
+        testFacade.selectSpace( 14 );
+        testFacade.selectSpace( 23 );
         simpleWait();
             
         System.out.println( "Attempting move: 51 to 42" );
-        theDriver.selectSpace( 51 );
-        theDriver.selectSpace( 42 );
+        testFacade.selectSpace( 51 );
+        testFacade.selectSpace( 42 );
         simpleWait();
             
         System.out.println( "Attempting move:  7 to 14 " );
-        theDriver.selectSpace( 7 );
-        theDriver.selectSpace( 14 );
+        testFacade.selectSpace( 7 );
+        testFacade.selectSpace( 14 );
         simpleWait();
             
         System.out.println( "Attempting move: 60 to 51" );
-        theDriver.selectSpace( 60 );
-        theDriver.selectSpace( 51 );
+        testFacade.selectSpace( 60 );
+        testFacade.selectSpace( 51 );
         simpleWait();
             
         System.out.println( "Attempting move: 21 to 28" );
-        theDriver.selectSpace( 21 );
-        theDriver.selectSpace( 28 );
+        testFacade.selectSpace( 21 );
+        testFacade.selectSpace( 28 );
         simpleWait();
             
         // All of that should set the stage for a multiple jump.
@@ -399,8 +394,8 @@ public class TestingKernel extends java.lang.Object{
         int turn = theDriver.whosTurn();
         
         System.out.println( "Attempting move: 35 to 21" );
-        theDriver.selectSpace( 35 );
-        theDriver.selectSpace( 21 );
+        testFacade.selectSpace( 35 );
+        testFacade.selectSpace( 21 );
         
         simpleWait();
         testBoard = theDriver.stateOfBoard();
@@ -421,8 +416,8 @@ public class TestingKernel extends java.lang.Object{
         // At this point, player should still have control.
         // Make that second jump.
         System.out.println( "Attempting move: 21 to 7" );
-        theDriver.selectSpace( 21 );
-        theDriver.selectSpace( 7  );
+        testFacade.selectSpace( 21 );
+        testFacade.selectSpace( 7  );
         
         // Check that the pieces have been moved/removed
         // and that control has changed hands.
@@ -461,8 +456,8 @@ public class TestingKernel extends java.lang.Object{
         System.out.println( "Try move with " +
             "same start and end location." );
         System.out.println( "Attempting move: 23 to 23" );
-        theDriver.selectSpace( 23 );
-        theDriver.selectSpace( 23 );
+        testFacade.selectSpace( 23 );
+        testFacade.selectSpace( 23 );
         
         simpleWait();
         testBoard = theDriver.stateOfBoard();
@@ -480,8 +475,8 @@ public class TestingKernel extends java.lang.Object{
         // occupied by another one of your pieces.
         System.out.println( "Trying to move to occupied spot." );
         System.out.println( "Attempting move: 8 to 17" );
-        theDriver.selectSpace( 8 );
-        theDriver.selectSpace( 17 );
+        testFacade.selectSpace( 8 );
+        testFacade.selectSpace( 17 );
         
         simpleWait();
         testBoard = theDriver.stateOfBoard();
@@ -499,8 +494,8 @@ public class TestingKernel extends java.lang.Object{
         // of your own pieces.
         System.out.println( "Trying to jump one of your own pieces." );
         System.out.println( "Attempting move: 1 to 19" );
-        theDriver.selectSpace( 1 );
-        theDriver.selectSpace( 19 );
+        testFacade.selectSpace( 1 );
+        testFacade.selectSpace( 19 );
         
         simpleWait();
         testBoard = theDriver.stateOfBoard();
@@ -526,8 +521,8 @@ public class TestingKernel extends java.lang.Object{
         // "random" spot on the board.
         System.out.println( "Trying to move to random location. " );
         System.out.println( "Attempting move: 5 to 37" );
-        theDriver.selectSpace( 5 );
-        theDriver.selectSpace( 37 );
+        testFacade.selectSpace( 5 );
+        testFacade.selectSpace( 37 );
         
         simpleWait();
         testBoard = theDriver.stateOfBoard();
@@ -550,8 +545,8 @@ public class TestingKernel extends java.lang.Object{
         // in the wrong direction.
         System.out.println( "Trying to move backwards." );
         System.out.println( "Attempting move: 40 to 33" );
-        theDriver.selectSpace( 40 );
-        theDriver.selectSpace( 33 );
+        testFacade.selectSpace( 40 );
+        testFacade.selectSpace( 33 );
         
         simpleWait();
         testBoard = theDriver.stateOfBoard();
@@ -575,8 +570,8 @@ public class TestingKernel extends java.lang.Object{
         System.out.println( "Now attempt to make a simple" +
             ", valid move." );
         System.out.println( "Attempting move: 10 to 19" );
-        theDriver.selectSpace( 10 );
-        theDriver.selectSpace( 19 );
+        testFacade.selectSpace( 10 );
+        testFacade.selectSpace( 19 );
         
         simpleWait();
         testBoard = theDriver.stateOfBoard();
