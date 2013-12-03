@@ -29,9 +29,7 @@ import java.net.*;
 
 public class CheckerGUI extends JFrame implements ActionListener{
     
-    //the facade for the game
     
-    private static Facade theFacade; //the facade
     private static Driver theDriver; //the Driver
     private Vector<JButton> possibleSquares = new Vector<JButton>();//a vector of the squares
     private int timeRemaining;//the time remaining
