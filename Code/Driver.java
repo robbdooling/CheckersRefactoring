@@ -51,9 +51,8 @@ public class Driver{
     private Player  passivePlayer;
     private boolean runningTimer;
     private Timer   theTimer;
-    private Facade  theFacade;
     private Rules   theRules;
-    private int	     warningTime = 999;
+    private int      warningTime = 999;
     private Board   theBoard;
     
     /**
@@ -63,23 +62,12 @@ public class Driver{
      * the system.
      */
     public Driver(){
-	// Create the board       
-	theBoard = new Board();
-	
-	// Create the rules passing in the board
-	theRules = new Rules( theBoard, this );
-	
-	// Create the facade and GUI
-	theFacade = new Facade( theBoard, this );	
-    }
+    // Create the board       
+    theBoard = new Board();
     
-    /**
-     * Return the facade the GUI will talk to.
-     *
-     * @return A facade to talk to the GUI.
-     */
-    public Facade getFacade(){
-	return theFacade;
+    // Create the rules passing in the board
+    theRules = new Rules( theBoard, this );
+    
     }
     
     /**
@@ -91,12 +79,12 @@ public class Driver{
      * @pre game is in progress
      */
     public int whosTurn(){
-	
-	// Return the integer value of the activePlayer object
-	int turn;
-	turn = activePlayer.getNumber();
-	
-	return turn;
+    
+    // Return the integer value of the activePlayer object
+    int turn;
+    turn = activePlayer.getNumber();
+    
+    return turn;
     }
     
     /**
@@ -114,52 +102,52 @@ public class Driver{
      */
     public void endTurn( Player player, int space ){
 
-	// Check to see if player passed in was the active player
-	// If player passed in was active player, check for multiple
-	// jump (space is none negative)
-	if ( activePlayer == player ){
-	    
-	    // Inform the player that the move was not valid,
-	    // or to make another jump
-	    if ( space < 0 ){
-		JOptionPane.showMessageDialog( null,
-	       	       activePlayer.getName() + " made an illegal move",
-      	       	       "Invalid Move", JOptionPane.INFORMATION_MESSAGE );
-	    } else {
-		JOptionPane.showMessageDialog( null,
-		       activePlayer.getName() + " please make" +
-       		       " another jump", "Multiple Jump Possible",
-		       JOptionPane.INFORMATION_MESSAGE );
-		
-		// Get the GUI to update
-		setPlayerModes( activePlayer, passivePlayer );
-		
-		// If game is networked tell networked player to send 
-		// the move
-		if ( gameType == HOSTGAME 
-		     || gameType == CLIENTGAME ) {
-		    ( (NetworkPlayer) activePlayer ).sendMove();
-		}
-	    }
-	} else if ( passivePlayer == player ) {
-	    // If game is networked, tell networked player to send move
-	    if ( gameType == HOSTGAME 
-		 || gameType == CLIENTGAME ) {
-		((NetworkPlayer)activePlayer).sendMove();
-		((NetworkPlayer)activePlayer).waitForPlayer();
-	    }
-	    
-	    // Inform the other player to make a move and
-	    // tell facade to update any listening GUIs and
-	    // reset the timer
-	    
-	    Player tempHold = activePlayer;
-	    activePlayer    = passivePlayer;
-	    passivePlayer   = tempHold;
-	    
-	    setPlayerModes( activePlayer, passivePlayer );
-	}
-	
+    // Check to see if player passed in was the active player
+    // If player passed in was active player, check for multiple
+    // jump (space is none negative)
+    if ( activePlayer == player ){
+        
+        // Inform the player that the move was not valid,
+        // or to make another jump
+        if ( space < 0 ){
+        JOptionPane.showMessageDialog( null,
+                   activePlayer.getName() + " made an illegal move",
+                       "Invalid Move", JOptionPane.INFORMATION_MESSAGE );
+        } else {
+        JOptionPane.showMessageDialog( null,
+               activePlayer.getName() + " please make" +
+                   " another jump", "Multiple Jump Possible",
+               JOptionPane.INFORMATION_MESSAGE );
+        
+        // Get the GUI to update
+        setPlayerModes( activePlayer, passivePlayer );
+        
+        // If game is networked tell networked player to send 
+        // the move
+        if ( gameType == HOSTGAME 
+             || gameType == CLIENTGAME ) {
+            ( (NetworkPlayer) activePlayer ).sendMove();
+        }
+        }
+    } else if ( passivePlayer == player ) {
+        // If game is networked, tell networked player to send move
+        if ( gameType == HOSTGAME 
+         || gameType == CLIENTGAME ) {
+        ((NetworkPlayer)activePlayer).sendMove();
+        ((NetworkPlayer)activePlayer).waitForPlayer();
+        }
+        
+        // Inform the other player to make a move and
+        // tell facade to update any listening GUIs and
+        // reset the timer
+        
+        Player tempHold = activePlayer;
+        activePlayer    = passivePlayer;
+        passivePlayer   = tempHold;
+        
+        setPlayerModes( activePlayer, passivePlayer );
+    }
+    
     }
     
     
@@ -170,12 +158,12 @@ public class Driver{
      * @param passive The passive player
      */
     public void setPlayerModes( Player active, Player passive ){
-	
-	activePlayer = active;
-	passivePlayer = passive;
-	
-	// Tell GUI to update
-	generateActionPerformed( update );
+    
+    activePlayer = active;
+    passivePlayer = passive;
+    
+    // Tell GUI to update
+    generateActionPerformed( update );
     }
 
     /**
@@ -212,14 +200,14 @@ public class Driver{
      *       to exit
      */
     public void endGame( String message ){
-	
-	// Call endOfGame on both players with the given message
-	playerOne.endOfGame( message );
-	playerTwo.endOfGame( message );
-	
-	// When players have acknowledged the end of game 
-	// call System.exit()
-	System.exit( 0 );
+    
+    // Call endOfGame on both players with the given message
+    playerOne.endOfGame( message );
+    playerTwo.endOfGame( message );
+    
+    // When players have acknowledged the end of game 
+    // call System.exit()
+    System.exit( 0 );
     }
     
     /**
@@ -233,21 +221,21 @@ public class Driver{
      * @post  a player with correct name has been created  
      */
     public void createPlayer( int num, int type, String name ){
-	Player temp = null;
+    Player temp = null;
 
-	if ( type == Player.LOCALPLAYER ) {
-	    temp = new LocalPlayer( num, theRules, this );
-	    temp.setName( name );
-	} else if ( type == Player.NETWORKPLAYER ) {
-	    temp = new NetworkPlayer( num, theRules, this );
-	    temp.setName( name );
-	}
-	
-	if ( num == 1 ) {
-	    playerOne = temp;
-	} else {
-	    playerTwo = temp;
-	}
+    if ( type == Player.LOCALPLAYER ) {
+        temp = new LocalPlayer( num, theRules, this );
+        temp.setName( name );
+    } else if ( type == Player.NETWORKPLAYER ) {
+        temp = new NetworkPlayer( num, theRules, this );
+        temp.setName( name );
+    }
+    
+    if ( num == 1 ) {
+        playerOne = temp;
+    } else {
+        playerTwo = temp;
+    }
     }
     
     /**
@@ -257,11 +245,11 @@ public class Driver{
      * @param name The name to assign to the player.
      */
     public void setPlayerName( int num, String name ){
-	if ( num == 1 ) {
-	    playerOne.setName( name );
-	} else {
-	    playerTwo.setName( name );
-	}
+    if ( num == 1 ) {
+        playerOne.setName( name );
+    } else {
+        playerTwo.setName( name );
+    }
     }
     
     /** 
@@ -287,9 +275,9 @@ public class Driver{
      *       of the draw
      */
     public void endInDraw( Player player ){
-   	// Calls endOfGame with a message that game ended in a draw.
-	endGame( player.getName() + "'s draw offer was accepted. \n\n"
-		 + "Game ended in a draw." );
+    // Calls endOfGame with a message that game ended in a draw.
+    endGame( player.getName() + "'s draw offer was accepted. \n\n"
+         + "Game ended in a draw." );
     }
 
     /**
@@ -299,13 +287,13 @@ public class Driver{
      * 
      */    
     public void drawOffered( Player player ){
-	
-	if( player.getNumber() == playerOne.getNumber() ){
-	    playerTwo.acceptDraw( player );
-	}else if( player.getNumber() == playerTwo.getNumber() ){
-	    playerOne.acceptDraw( player );
-	}
-	
+    
+    if( player.getNumber() == playerOne.getNumber() ){
+        playerTwo.acceptDraw( player );
+    }else if( player.getNumber() == playerTwo.getNumber() ){
+        playerOne.acceptDraw( player );
+    }
+    
     }
 
     /**
@@ -313,9 +301,9 @@ public class Driver{
      */
     public void pressDraw(){
 
-	// Alerts both players and the kernel that one person 
-	// has offered a draw calls offerDraw() on both players
-	activePlayer.offerDraw( activePlayer );
+    // Alerts both players and the kernel that one person 
+    // has offered a draw calls offerDraw() on both players
+    activePlayer.offerDraw( activePlayer );
 
     }
     
@@ -326,12 +314,12 @@ public class Driver{
      * @param player The player declining the draw.
      */
     public void declineDraw( Player player ){
-	if ( gameType == LOCALGAME ) {
-	    player.endInDeclineDraw( player );
-	} else {
-	    playerOne.endInDeclineDraw( player );
-	    playerTwo.endInDeclineDraw( player );
-	}
+    if ( gameType == LOCALGAME ) {
+        player.endInDeclineDraw( player );
+    } else {
+        playerOne.endInDeclineDraw( player );
+        playerTwo.endInDeclineDraw( player );
+    }
     }
     
     /**
@@ -341,8 +329,8 @@ public class Driver{
      * @param the player who quit
      */
     public void endInQuit( Player player ){
-	playerOne.endOfGame( player.getName() + " quit the game" );
-	playerTwo.endOfGame( player.getName() + " quit the game" );
+    playerOne.endOfGame( player.getName() + " quit the game" );
+    playerTwo.endOfGame( player.getName() + " quit the game" );
     }
     
     /**
@@ -359,20 +347,20 @@ public class Driver{
      *       restraints are in place
      */
     public void setTimer( int time, int warning ) throws Exception{
-	// Checks to see that time is in between the necessary frame
-   	// If values are negative, set runningTimer to false
-	// If they are positive values, create the Timer and 
-	// notifier with the times
+    // Checks to see that time is in between the necessary frame
+    // If values are negative, set runningTimer to false
+    // If they are positive values, create the Timer and 
+    // notifier with the times
        if( ( time == -1 ) || ( ( time >= 10 || time <= 300 ) 
-				&& ( warning >= 10 || warning <= 300 ) ) ){
-	    if ( time < 0 ) {
-	         runningTimer = false;
-	    } else {
-	         runningTimer = true;
-	         theTimer = new Timer();
-	    }
+                && ( warning >= 10 || warning <= 300 ) ) ){
+        if ( time < 0 ) {
+             runningTimer = false;
+        } else {
+             runningTimer = true;
+             theTimer = new Timer();
+        }
        } else {
-		throw new Exception( "Invalid timer settings" );
+        throw new Exception( "Invalid timer settings" );
        }
         
     }
@@ -385,15 +373,15 @@ public class Driver{
      * @post each player has their colors
      */
     private void selectColors(){
-   	// Randomly select color for each player and call the 
-	// setColor() method of each
-	if ( Math.random() > .5 ) {
-	    playerOne.setColor( Color.blue );
-	    playerTwo.setColor( Color.white );
-	} else {
-	    playerOne.setColor( Color.white );
-	    playerTwo.setColor( Color.blue );
-	}
+    // Randomly select color for each player and call the 
+    // setColor() method of each
+    if ( Math.random() > .5 ) {
+        playerOne.setColor( Color.blue );
+        playerTwo.setColor( Color.white );
+    } else {
+        playerOne.setColor( Color.white );
+        playerTwo.setColor( Color.blue );
+    }
     }
     
     /**
@@ -405,26 +393,26 @@ public class Driver{
      * @post The first person is able to make their first move
      */
     public void startGame(){
-	selectColors();
+    selectColors();
        
-	if ( gameType == HOSTGAME ) {
-	    ( (NetworkPlayer)playerTwo).waitForConnect();
-	    //( (NetworkPlayer)playerTwo).waitForConnect();
-	} else if ( gameType == CLIENTGAME ) {
-	    //( (NetworkPlayer)playerOne).connectToHost();
-	    ( (NetworkPlayer)playerOne).connectToHost();
-	}
-	
-	// Tell player with the correct color to make a move
-	if ( playerOne.getColor() == Color.white ) {
-	    activePlayer  = playerOne;
-	    passivePlayer = playerTwo;
-	} else {
-	    activePlayer  = playerTwo;
-	    passivePlayer = playerOne;
-	}
-	
-	setPlayerModes( activePlayer, passivePlayer );
+    if ( gameType == HOSTGAME ) {
+        ( (NetworkPlayer)playerTwo).waitForConnect();
+        //( (NetworkPlayer)playerTwo).waitForConnect();
+    } else if ( gameType == CLIENTGAME ) {
+        //( (NetworkPlayer)playerOne).connectToHost();
+        ( (NetworkPlayer)playerOne).connectToHost();
+    }
+    
+    // Tell player with the correct color to make a move
+    if ( playerOne.getColor() == Color.white ) {
+        activePlayer  = playerOne;
+        passivePlayer = playerTwo;
+    } else {
+        activePlayer  = playerTwo;
+        passivePlayer = playerOne;
+    }
+    
+    setPlayerModes( activePlayer, passivePlayer );
     }
     
     /**
@@ -439,10 +427,10 @@ public class Driver{
      * @post The players are connected to play
      */
     public void setHost( URL host ){
-   	// Call connectToHost in player two with the URL
+    // Call connectToHost in player two with the URL
        if( host != null ){
-	     ((NetworkPlayer)playerOne).setHost( host );
-	     ((NetworkPlayer)playerTwo).setHost( host );
+         ((NetworkPlayer)playerOne).setHost( host );
+         ((NetworkPlayer)playerTwo).setHost( host );
        }
     }
     
@@ -455,8 +443,8 @@ public class Driver{
      * @post this method has not altered anything
      */
     public Player getOppositePlayer(){
-   	// Returns the player whose getTurnStatus is false
-   	return passivePlayer;
+    // Returns the player whose getTurnStatus is false
+    return passivePlayer;
     }
 
     /**
@@ -466,8 +454,8 @@ public class Driver{
      * 
      */
     public Board stateOfBoard(){
-	// Return the board so GUI can go through and update itself
-	return theBoard;
+    // Return the board so GUI can go through and update itself
+    return theBoard;
     }
 
     
@@ -481,7 +469,7 @@ public class Driver{
      * @post this method has not altered anything
      */
     public boolean timerRunning(){
-   	return runningTimer;
+    return runningTimer;
     }
     
    
@@ -494,7 +482,7 @@ public class Driver{
      * @post Mode is set
      */
     public void setGameMode( int newMode ) throws Exception{
-	// Set the value of mode
+    // Set the value of mode
        if( newMode == LOCALGAME || newMode == HOSTGAME || newMode == CLIENTGAME ){
            gameType = newMode;
        }else {
@@ -511,7 +499,7 @@ public class Driver{
      * @post This method has changed nothing
      */
     public int getGameMode(){
-   	return gameType;
+    return gameType;
     }
     
     /**
@@ -523,15 +511,15 @@ public class Driver{
      * @post This method has changed nothing
      */
     public Notifier getTimerNotifier(){
-   	// Return the timers notifier, by asking the timer 
-	// for its notifier
-	Notifier timer = null;
-	
-	if ( theTimer != null ) {
-	    timer = theTimer.getNotifier();
-	}
-	
-	return timer;
+    // Return the timers notifier, by asking the timer 
+    // for its notifier
+    Notifier timer = null;
+    
+    if ( theTimer != null ) {
+        timer = theTimer.getNotifier();
+    }
+    
+    return timer;
     }
 
     /**
@@ -543,15 +531,15 @@ public class Driver{
      * 
      */
     public int getTimer(){
-	int retval = 0;
+    int retval = 0;
 
-	// Makes sure there is a timer for this game
-	if( timerRunning() ){
-	    retval = theTimer.getTime();
-	}
+    // Makes sure there is a timer for this game
+    if( timerRunning() ){
+        retval = theTimer.getTime();
+    }
 
-	// Returns the timer value
-	return retval;
+    // Returns the timer value
+    return retval;
     }
 
     /**
@@ -563,34 +551,34 @@ public class Driver{
      * @pre there has been a timer set for the current game  
      */
     public int getTimerWarning(){
-	int retval = -1;
+    int retval = -1;
 
-	// Makes sure there is a timer for this game
-	if( warningTime != 999 ){
-	    retval = warningTime;
-	}
+    // Makes sure there is a timer for this game
+    if( warningTime != 999 ){
+        retval = warningTime;
+    }
 
-	// Returns the timer value (class variable: warningTime )
-	return retval;
+    // Returns the timer value (class variable: warningTime )
+    return retval;
     }
     
     public void generateActionPerformed(){
 
-	if ( actionListener != null ) {
-	    actionListener.actionPerformed( 
+    if ( actionListener != null ) {
+        actionListener.actionPerformed( 
                new ActionEvent( this, ActionEvent.ACTION_PERFORMED, ID ) );
-	    // Fires event associated with timer, or a move made on GUI
-	}
+        // Fires event associated with timer, or a move made on GUI
+    }
 
     }
     
     private void generateActionPerformed( String command ){
-    	
-	if ( actionListener != null ) {
-	    actionListener.actionPerformed( 
+        
+    if ( actionListener != null ) {
+        actionListener.actionPerformed( 
               new ActionEvent( this, ActionEvent.ACTION_PERFORMED, command ) );
-	    // Fires an event associated with timer, or move made on GUI
-	}
+        // Fires an event associated with timer, or move made on GUI
+    }
 
     }
     
@@ -599,8 +587,8 @@ public class Driver{
      */
     //NOT SURE IF NEEDED
     public void addActionListener( ActionListener a ){
-	actionListener = AWTEventMulticaster.add( actionListener, a );
-	//Adds an action listener to the facade
+    actionListener = AWTEventMulticaster.add( actionListener, a );
+    //Adds an action listener to the facade
     }
     
     /**
@@ -615,29 +603,29 @@ public class Driver{
     *              scheme, left to right and top to bottom.
     */
    public void selectSpace( int space ){  
-	
-	// When button is click, take info from the GUI
-	if( startSpace == 99 ){
-	    
-	    // Set startSpace to space
-	    startSpace = space;
-	    
-	}else if( startSpace != 99 && endSpace == 99 ){
-	    if( space == startSpace ){
-		
-		// Viewed as un-selecting the space selected
-		// Set startSpace to predetermined unselected value
-		startSpace = 99;
-		
-	    }else{
-		// The endSpace will be set to space
-		endSpace = space;
-		makeLocalMove();
-	    }
-	}
-	
-	generateActionPerformed( "update" );   
-	
+    
+    // When button is click, take info from the GUI
+    if( startSpace == 99 ){
+        
+        // Set startSpace to space
+        startSpace = space;
+        
+    }else if( startSpace != 99 && endSpace == 99 ){
+        if( space == startSpace ){
+        
+        // Viewed as un-selecting the space selected
+        // Set startSpace to predetermined unselected value
+        startSpace = 99;
+        
+        }else{
+        // The endSpace will be set to space
+        endSpace = space;
+        makeLocalMove();
+        }
+    }
+    
+    generateActionPerformed( "update" );   
+    
    }
    
    /**
@@ -648,18 +636,18 @@ public class Driver{
     * @pre endSpace is defined
     */
    private void makeLocalMove(){
-	
-	//make sure startSpace and endSpace are defined
-	if( startSpace != 99 && endSpace!= 99 ){
-	    // Takes the information of a move and calls makeMove() 
-	    // in a localPlayer
-	    boolean result = activePlayer.makeMove( startSpace, endSpace );
-	}
-	
-	// Reset startSpace and endSpace to 99
-	startSpace = 99;
-	endSpace   = 99;
-	
+    
+    //make sure startSpace and endSpace are defined
+    if( startSpace != 99 && endSpace!= 99 ){
+        // Takes the information of a move and calls makeMove() 
+        // in a localPlayer
+        boolean result = activePlayer.makeMove( startSpace, endSpace );
+    }
+    
+    // Reset startSpace and endSpace to 99
+    startSpace = 99;
+    endSpace   = 99;
+    
    }
     
 }//Driver.java

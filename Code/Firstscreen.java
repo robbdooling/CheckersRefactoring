@@ -23,7 +23,6 @@ import java.awt.*;
 
 public class Firstscreen extends JFrame implements ActionListener{
 
-    Facade theFacade;
     Driver theDriver;
     Secondscreen next;
   
@@ -47,10 +46,10 @@ public class Firstscreen extends JFrame implements ActionListener{
      *     
      */
 
-    public Firstscreen( Facade facade, Driver driver ) {
+    public Firstscreen( Driver driver ) {
 
 	super( "First screen" );
-        theFacade = facade;
+   
 	theDriver = driver;
         initComponents();
         pack();
@@ -231,7 +230,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			
 			//hide the Firstscreen, make a Secondscreen and show it
 			this.hide();
-			next = new Secondscreen( theFacade, this, theDriver.LOCALGAME, theDriver );
+			next = new Secondscreen(this, theDriver.LOCALGAME, theDriver );
 			next.show();
 			
 			//if the host game button is selected
@@ -245,7 +244,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			
 			//hide the Firstscreen, make the Secondscreen and show it
 			this.hide();
-			next = new Secondscreen( theFacade, this, theDriver.HOSTGAME, 					theDriver );
+			next = new Secondscreen(this, theDriver.HOSTGAME, theDriver );
 			next.show();
 			
 			//if the join game button is selected
@@ -267,7 +266,7 @@ public class Firstscreen extends JFrame implements ActionListener{
 			    
 			    //hide the Firstscreen, make and show the Second screen
 			    this.hide();
-			    next = new Secondscreen( theFacade, this, theDriver.CLIENTGAME, 					theDriver );
+			    next = new Secondscreen(this, theDriver.CLIENTGAME, 					theDriver );
 			    next.show();
                                         
 			    //catch any exceptions

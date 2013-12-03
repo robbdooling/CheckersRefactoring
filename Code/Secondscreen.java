@@ -28,7 +28,6 @@ import javax.swing.event.*;
 public class Secondscreen extends JFrame
     implements ActionListener, ChangeListener {
     
-    private Facade theFacade;
     private Firstscreen theFirst;
     private int gameType;
     private Driver theDriver;
@@ -58,10 +57,9 @@ public class Secondscreen extends JFrame
      * 
      */
     
-    public Secondscreen( Facade f, Firstscreen first, int type, Driver d ) {
+    public Secondscreen(Firstscreen first, int type, Driver d ) {
 
         super( "Second Screen" );
-        theFacade = f;
         theFirst = first;
         gameType = type;
         theDriver = d;
