@@ -33,8 +33,6 @@ import java.net.*;
  * @version
  */
 public class TestingKernel extends java.lang.Object{
-    // The facade that we will manipulate and interact with.
-    //public Facade theDriver;
 
     // The driver that this program needs to call
     public Driver theDriver;
@@ -70,13 +68,11 @@ public class TestingKernel extends java.lang.Object{
     /**
      * The constructor for this kernel which calls the other methods.
      *
-     * @param aFacade The facade to manipulate in this program.
+     * @param aDriver The driver to manipulate in this program.
      */
     public TestingKernel( Driver aDriver ){
-        //theDriver = aFacade;
         theDriver  = aDriver;
         theDriver.addActionListener(new CheckerGUI());
-        //theDriver = theDriver.getFacade();
                 
         // Call the needed methods.
         setBegin();
