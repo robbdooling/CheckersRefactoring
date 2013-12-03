@@ -25,8 +25,6 @@ import java.awt.*;
 public class Board {
 
    private Piece pieces[]; // the pieces that are on the board
-   
-   // These will probably be removed later
    public static int SINGLE = 0;
    public static int KING = 1;
 
@@ -43,34 +41,36 @@ public class Board {
 	   pieces = new Piece[64];
 
 	   // create blue pices
-	   pieces[1] = new Piece( Color.blue, 1, this );
-	   pieces[3] = new Piece( Color.blue, 3, this );
-	   pieces[5] = new Piece( Color.blue, 5, this );
-	   pieces[7] = new Piece( Color.blue, 7, this );
-	   pieces[8] = new Piece( Color.blue, 8, this );
-	   pieces[10] = new Piece( Color.blue, 10, this );
-	   pieces[12] = new Piece( Color.blue, 12, this );
-	   pieces[14] = new Piece( Color.blue, 14, this );
-	   pieces[17] = new Piece( Color.blue, 17, this );
-	   pieces[19] = new Piece( Color.blue, 19, this );
-	   pieces[21] = new Piece( Color.blue, 21, this );
-	   pieces[23] = new Piece( Color.blue, 23, this );
+	   pieces[1] = new SinglePiece( Color.blue );
+	   pieces[3] = new SinglePiece( Color.blue );
+	   pieces[5] = new SinglePiece( Color.blue );
+	   pieces[7] = new SinglePiece( Color.blue );
+	   pieces[8] = new SinglePiece( Color.blue );
+	   pieces[10] = new SinglePiece( Color.blue );
+	   pieces[12] = new SinglePiece( Color.blue );
+	   pieces[14] = new SinglePiece( Color.blue );
+	   pieces[17] = new SinglePiece( Color.blue );
+	   pieces[19] = new SinglePiece( Color.blue );
+	   pieces[21] = new SinglePiece( Color.blue );
+	   pieces[23] = new SinglePiece( Color.blue );
 
 	   // create the white pieces
-	   pieces[40] = new Piece( Color.white, 40, this );
-	   pieces[42] = new Piece( Color.white, 42, this );
-	   pieces[44] = new Piece( Color.white, 44, this );
-	   pieces[46] = new Piece( Color.white, 46, this );
-	   pieces[49] = new Piece( Color.white, 49, this );
-	   pieces[51] = new Piece( Color.white, 51, this );
-	   pieces[53] = new Piece( Color.white, 53, this );
-	   pieces[55] = new Piece( Color.white, 55, this );
-	   pieces[56] = new Piece( Color.white, 56, this );
-	   pieces[58] = new Piece( Color.white, 58, this );
-	   pieces[60] = new Piece( Color.white, 60, this );
-	   pieces[62] = new Piece( Color.white, 62, this );
+	   pieces[40] = new SinglePiece( Color.white );
+	   pieces[42] = new SinglePiece( Color.white );
+	   pieces[44] = new SinglePiece( Color.white );
+	   pieces[46] = new SinglePiece( Color.white );
+	   pieces[49] = new SinglePiece( Color.white );
+	   pieces[51] = new SinglePiece( Color.white );
+	   pieces[53] = new SinglePiece( Color.white );
+	   pieces[55] = new SinglePiece( Color.white );
+	   pieces[56] = new SinglePiece( Color.white );
+	   pieces[58] = new SinglePiece( Color.white );
+	   pieces[60] = new SinglePiece( Color.white );
+	   pieces[62] = new SinglePiece( Color.white );
 
    }
+
+   
 
    /**
     * Move the piece at the start position to the end position
@@ -79,7 +79,6 @@ public class Board {
     * @param end - the position where piece is moved
     * 
     * @return -1 if there is a piece in the end position
-    * @deprecated Use {@link movePiece(Move)} instead, but this might be a better format
     */
    public int movePiece(int start, int end) {
 
@@ -108,15 +107,7 @@ public class Board {
 
    }
 
-   public int movePiece(Move move) {
-        Piece p = pieces[move.getPiece().getLocation()];
-    	pieces[p.getLocation()] = null;
-    	pieces[move.endLocation()] = p;
-    
-    	p.move(move.endLocation());
-    	
-    	return 0; // This is only 0 so that nothing breaks while we refactor
-   }
+   
 
    /**
     * This method checks if the space on the board contains a piece
@@ -165,7 +156,14 @@ public class Board {
     * @param space - the psotion at which the king piece is created 
     */
    public void kingPiece(int space) {
-	pieces[space].upgrade();
+   
+	   // create a new king piece
+	   // go to the space position in the array and place it there
+	   // if the position is not ocupied
+	   Color color = pieces[space].getColor();
+	   Piece piece = new KingPiece( color );
+	   pieces[space] = piece;
+	   
    }
    
    
@@ -204,7 +202,8 @@ public class Board {
     */
    public Piece getPieceAt(int space) {
 
-	  Piece returnValue = null; 
+	   Piece returnValue = new SinglePiece(Color.red);
+	   
 	   try{
 	   	   // check if there is piece at space position
 	   	   // if there is none, return null

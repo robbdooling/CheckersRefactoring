@@ -57,8 +57,11 @@ public class CheckerGUI extends JFrame implements ActionListener{
      * @param name2 the second players name
      *
      */
+    public CheckerGUI(){
+    	
+    }
 
-    public CheckerGUI( Facade facade, String name1, String name2, Driver driver ) {
+    public CheckerGUI( String name1, String name2, Driver driver ) {
 
         super("Checkers");
 
@@ -78,7 +81,6 @@ public class CheckerGUI extends JFrame implements ActionListener{
                 
         playerOnesName = nameOne;
         playerTwosName = nameTwo;
-        theFacade = facade;
         theDriver = driver;
         register();
         
@@ -96,7 +98,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
     private void register() {
 	
         try{
-	    theFacade.addActionListener( this );
+	    theDriver.addActionListener( this );
 	  
         }catch( Exception e ){
             
@@ -292,7 +294,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 		e.getActionCommand().equals( "62" ) ) {
 		
 		//call selectSpace with the button pressed
-		theFacade.selectSpace(
+		theDriver.selectSpace(
 				   Integer.parseInt( e.getActionCommand() ) );
 		
 		//if draw is pressed
@@ -305,19 +307,19 @@ public class CheckerGUI extends JFrame implements ActionListener{
 		//does sequence of events for a resign
 		theDriver.endInQuit(theDriver.getActivePlayer());
 		
-		//if the source came from the facade
-	    }else if( e.getSource().equals( theFacade ) ) {
+		//if the source came from the Driver
+	    }else if( e.getSource().equals( theDriver ) ) {
 		
 		//if its a player switch event
-		if ( (e.getActionCommand()).equals(theFacade.playerSwitch) ) {
+		if ( (e.getActionCommand()).equals(theDriver.playerSwitch) ) {
 		    //set a new time
 		    timeRemaining = theDriver.getTimer();
 		    //if it is an update event
-		} else if ( (e.getActionCommand()).equals(theFacade.update) ) {
+		} else if ( (e.getActionCommand()).equals(theDriver.update) ) {
 		    //update the GUI
 		    update();
 		} else {
-		    throw new Exception( "unknown message from facade" );
+		    throw new Exception( "unknown message from Driver" );
 		}
 	    }
 	    //catch various Exceptions

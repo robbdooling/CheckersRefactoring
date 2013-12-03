@@ -12,6 +12,7 @@
  */
 
 import java.awt.*;
+import java.util.*;
 
 /**
  * This is a class representing a single piece (a piece that has not been
@@ -19,7 +20,6 @@ import java.awt.*;
  *
  * @author
  *
- * @deprecated Use a {@link Piece} object instead.
  */
 public class SinglePiece extends Piece {
 	
@@ -33,12 +33,10 @@ public class SinglePiece extends Piece {
     * @param c - the color of this single piece
     * @param pc - the possible captures of this single piece
     * @param pm - the possible moves of this single piece
-    * 
-    * @deprecated Use a {@link Piece} object instead.
     */
    public SinglePiece( Color c  ) {
  
-	    super( c, -3, null );
+	    super( c );
 		type = SINGLE;
    }
    
@@ -46,7 +44,6 @@ public class SinglePiece extends Piece {
     * This method returns that the type of the checker is single
     * 
     * @return type which is 0 for single
-    * @deprecated This class is deprecated; use {@link Piece#getType()} instead.
     */
    public int getType() {
  
