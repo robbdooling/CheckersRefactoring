@@ -41,9 +41,6 @@ public abstract class Player {
     protected String playerName;
     protected Color  playerColor;
     protected int    type;
-
-    protected boolean isTurn;
-    protected Piece selectedPiece;
     
     /**
      * Create a new instance of a Player object to represent
@@ -59,8 +56,6 @@ public abstract class Player {
 	playerNumber = num;
 	theRules     = newRules;
 	theDriver    = newDriver;
-        isTurn       = false;
-        selectedPiece = null;
     }
     
     /**
@@ -72,13 +67,6 @@ public abstract class Player {
 	return type;
     }
     
-    public void beginTurn() {
-        this.isTurn = true;
-    }
-
-    public void endTurn() {
-        this.isTurn = false;
-    }
     /**
      * Make an istance of a Move that was just made and pass it 
      * to theRules by calling its validateMove method.
@@ -98,15 +86,7 @@ public abstract class Player {
       
 	return retval;
     }
-
-    protected Move createMove(int location) {
-	return new Move(selectedPiece, location);
-    }
     
-    protected void sendMoveToDriver(Move move) {
-	// TODO Send move to the driver
-    }
-
     /**
      * This method is used for when a user has clicked on the 
      * "Quit" button on the GUI.  It handles exiting  the game.

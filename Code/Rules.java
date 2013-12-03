@@ -23,7 +23,6 @@ import java.awt.*;
  * @author
  * @author
  * 
- * @deprecated This class is replaced by {@link RuleSet}
  */
 public class Rules {
     
@@ -46,7 +45,6 @@ public class Rules {
      *
      * @param board - the checker board.
      * @param driver - the main driver of the program.
-     * @deprecated This class is replaced by {@link RuleSet}
      */
     public Rules( Board board, Driver driver ) {
 	
@@ -66,8 +64,6 @@ public class Rules {
      * 
      *  @pre a player has made a move
      *  @post the player knows if the move has legal
-     *  
-     *  @deprecated Use {@link Piece#validateMove(Move)} instead
      */
     public boolean validateMove( Move move ) {
         
@@ -91,8 +87,8 @@ public class Rules {
 	    Vector<Integer> pieces = new Vector<Integer>();
 	    Vector<Integer> tempVec = new Vector<Integer>();
 	    Vector<Integer> startVec = new Vector<Integer>();
-	    Vector<Integer> possibleJumps = checkForPossibleJumps( start, pieceType, 
-	            player );
+	    Vector<Integer> possibleJumps = checkForPossibleJumps( start, pieceType,
+							  player );
 	    // Check all pieces for jumps.
 	    //if ( player.getColor() == Color.white ) {
 		//pieces = theBoard.whitePieces(); 
