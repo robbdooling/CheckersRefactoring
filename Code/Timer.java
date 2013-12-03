@@ -13,7 +13,7 @@
 
 /**
  *  This timer runs on the separate thread and during
- *  the simulation tells fasade to update the warning and normal times 
+ *  the simulation tells fascade to update the warning and normal times 
  *
  *  @invariant all variables have valid values
  *
@@ -27,7 +27,7 @@ public class Timer extends Thread{
     private Notifier notifier;
     
     /**
-     * This constaructor creates a new timer
+     * This constructor creates a new timer
      */    
     public Timer(){
 	notifier = new Notifier( notifier.TIME_UPDATE );
