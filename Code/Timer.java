@@ -13,7 +13,7 @@
 
 /**
  *  This timer runs on the separate thread and during
- *  the simulation tells fascade to update the warning and normal times 
+ *  the simulation tells driver to update the warning and normal times 
  *
  *  @invariant all variables have valid values
  *
@@ -24,13 +24,11 @@ public class Timer extends Thread{
 
     private static int INTERVAL = 100;    
     public int      interval;
-    private Notifier notifier;
     
     /**
      * This constructor creates a new timer
      */    
     public Timer(){
-	notifier = new Notifier( notifier.TIME_UPDATE );
 	interval = INTERVAL;
     }
     
@@ -40,7 +38,6 @@ public class Timer extends Thread{
      * @param inter - the new interval
      */
     public Timer( int inter ){
-	notifier = new Notifier( notifier.TIME_UPDATE );
 	interval = inter;
     }
     
@@ -52,7 +49,7 @@ public class Timer extends Thread{
      */
     public void run() {
 	// Start the timer thread 
-	// Notify the facade every interval
+	// Notify the driver every interval
 	while ( true ) {
 	    try {
 		sleep( INTERVAL );
@@ -61,20 +58,14 @@ public class Timer extends Thread{
 		System.err.println( "The timer malfunctioned." );
 	    }
 	    
-	    notifier.generateActionPerformed();
 	}
     }
     
     /**
-     * Get the notifier.
+     * Get the interval.
      * 
-     * @return Notifier
-     * @roseuid 3C5AE4FD00C1
+     * @return interval
      */
-    public Notifier getNotifier(){
-	return notifier;
-    }
-
     public int getTime(){
 	return interval;
     }

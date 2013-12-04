@@ -503,20 +503,19 @@ public class Driver{
     }
     
     /**
-     * Return the notifier of the Timer
+     * Return the time interval of the Timer
      *
-     * @return the notifier for the Timer
+     * @return the time
      *
      * @pre  The game is running
      * @post This method has changed nothing
      */
-    public Notifier getTimerNotifier(){
-    // Return the timers notifier, by asking the timer 
-    // for its notifier
-    Notifier timer = null;
+    public int getTime(){
+    // Return the timers interval
+    int timer = 0;
     
     if ( theTimer != null ) {
-        timer = theTimer.getNotifier();
+        timer = theTimer.getTime();
     }
     
     return timer;
