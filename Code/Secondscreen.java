@@ -366,4 +366,4 @@ public class Secondscreen extends JFrame
 	System.exit(0);
     }
   
-}//Secondscreen
+}//Secondscreen.java
