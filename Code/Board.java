@@ -153,7 +153,6 @@ public class Board {
    
 	   // go to the space position in the array
 	   // set it equal to null
-	   
 	   pieces[ space ] = null;
 
    }
@@ -162,7 +161,7 @@ public class Board {
    /**
     * This method creates a king piece 
     * 
-    * @param space - the psotion at which the king piece is created 
+    * @param space - the position at which the king piece is created 
     */
    public void kingPiece(int space) {
 	pieces[space].upgrade();
@@ -182,7 +181,7 @@ public class Board {
 	   // go to the space position in the array
 	   // check if there is a piece at that position
 	   // if there is none, return null
-	   // else retrun the color of the piece
+	   // else return the color of the piece
 	   
 	   if( occupied( space ) ) {
 		   
@@ -231,11 +230,11 @@ public class Board {
    
    
    /**
-    * This method returns if there is a piece of color on the board
+    * This method returns if there is a piece of the specified color on the board
     * 
     * @param color - the color of the piece
     * 
-    * @return true if there is a piece of color left on the board
+    * @return true if there is a piece of the specified color left on the board
     *				else return false	
     */
    public boolean hasPieceOf( Color color) {
@@ -244,7 +243,7 @@ public class Board {
 	   boolean returnValue = false;
 
 	   // go through the whole array
-	   // if there is a piece of color in the arrar return true
+	   // if there is a piece of color in the array return true
 	   // else return false
 	   for( int i =1; i < pieces.length; i++ ) {
 		   
@@ -265,7 +264,7 @@ public class Board {
    /**
     * This method returns the size of the board
     * 
-    * @return the size of the board, always 64
+    * @return the size of the board, which is always 64
     */
    public int sizeOf() {
        return 64;
