@@ -23,20 +23,20 @@ public class SingleRuleSet extends RuleSet {
      */
     protected int[] moveLocations(Piece piece) {
         int[] locations;
-        if (piece.getColor() == Color.blue)
+        if (piece.getColor() == Color.white)
             locations = new int[] { -9, -7, -18, -14 };
-        else if (piece.getColor() == Color.white)
+        else if (piece.getColor() == Color.blue)
             locations = new int[] { 7, 9, 14, 18 };
         else
             return null;
 
         // Check vertical move validity
         int pieceLocationVerMod = (piece.getLocation() / 8);
-        if (piece.getColor() == Color.blue && pieceLocationVerMod < 2) {
+        if (piece.getColor() == Color.white && pieceLocationVerMod < 2) {
             for (int i = pieceLocationVerMod * 2; i < 4; i++) {
                 locations[i] = Integer.MIN_VALUE;
             }
-        } else if (piece.getColor() == Color.white && pieceLocationVerMod > 5) {
+        } else if (piece.getColor() == Color.blue && pieceLocationVerMod > 5) {
             for (int i = (7 - pieceLocationVerMod) * 2; i < 4; i++) {
                 locations[i] = Integer.MIN_VALUE;
             }
@@ -48,9 +48,9 @@ public class SingleRuleSet extends RuleSet {
             locations[0] = Integer.MIN_VALUE;
         if (pieceLocationHorMod == 7)
             locations[1] = Integer.MIN_VALUE;
-        if (pieceLocationHorMod == 1)
+        if (pieceLocationHorMod <= 1)
             locations[2] = Integer.MIN_VALUE;
-        if (pieceLocationHorMod == 6)
+        if (pieceLocationHorMod >= 6)
             locations[3] = Integer.MIN_VALUE;
 
         return locations;

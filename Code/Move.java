@@ -45,11 +45,11 @@
 		this.piece = null;
 	}
 
-        public Move(Piece piece, int location) {
+    public Move(Player player, Piece piece, int location) {
 		this.piece = piece;
 		this.endingLocation = location;
-		this.thePlayer = null;
-		this.startingLocation = Integer.MIN_VALUE;
+		this.thePlayer = player;
+		this.startingLocation = piece.getLocation();
 	}
 
 	/**
@@ -89,6 +89,12 @@
 	public int endLocation() {
 		
 		return endingLocation;
+	}
+	
+	public boolean validate() {
+	    if (thePlayer.playerColor != piece.getColor())
+	        return false;
+	    return piece.validateMove(this);
 	}
      
 } //Move.java

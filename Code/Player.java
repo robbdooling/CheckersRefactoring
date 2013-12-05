@@ -98,13 +98,10 @@ public abstract class Player {
       
 	return retval;
     }
-
-    protected Move createMove(int location) {
-	return new Move(selectedPiece, location);
-    }
     
-    protected void sendMoveToDriver(Move move) {
-	// TODO Send move to the driver
+    public void makeMove( Piece piece, int location ) {
+        Move move = new Move (this, piece, location);
+        theDriver.makeMove(move);
     }
 
     /**

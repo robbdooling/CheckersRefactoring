@@ -33,6 +33,8 @@ public class CheckerGUI extends JFrame implements ActionListener{
     private static Driver theDriver; //the Driver
     private Vector<JButton> possibleSquares = new Vector<JButton>();//a vector of the squares
     private int timeRemaining;//the time remaining
+    private Board board;
+    private Piece piece = null;
     
     private JButton[][] allSquares = new JButton[8][8];
     private JLabel PlayerOnelabel;
@@ -290,10 +292,16 @@ public class CheckerGUI extends JFrame implements ActionListener{
 		e.getActionCommand().equals( "58" ) ||
 		e.getActionCommand().equals( "60" ) ||
 		e.getActionCommand().equals( "62" ) ) {
-		
-		//call selectSpace with the button pressed
-		theDriver.selectSpace(
-				   Integer.parseInt( e.getActionCommand() ) );
+	        
+		int space = Integer.parseInt( e.getActionCommand() ) ;
+		Piece p = board.getPieceAt(space);
+		if (p != null) {
+		    this.piece = p;
+		    }
+		    else if (piece != null) {
+		        theDriver.getActivePlayer().makeMove(piece, space);
+		        piece = null;
+		    }
 		
 		//if draw is pressed
 	    }else if( e.getActionCommand().equals( "draw" ) ){
@@ -352,7 +360,7 @@ public class CheckerGUI extends JFrame implements ActionListener{
 	    theDriver.endGame(" ");
 	}
 	//the board to read information from
-	Board board = theDriver.stateOfBoard();
+	board = theDriver.stateOfBoard();
 	//a temp button to work with
 	JButton temp =  new JButton();
 	

@@ -115,6 +115,12 @@ public class Board {
     
     	p.move(move.endLocation());
     	
+    	int moveDistance = move.endLocation() - move.startLocation();
+    	if (moveDistance > 9 || moveDistance < -9) {
+    	    removePiece(move.endLocation() - (moveDistance / 2));
+    	    return 1;
+    	}
+    	
     	return 0; // This is only 0 so that nothing breaks while we refactor
    }
 

@@ -648,6 +648,37 @@ public class Driver{
     endSpace   = 99;
     
    }
+
+public void makeMove(Move move) {
+    if (!move.validate()) {
+        this.endTurn(activePlayer, -1);
+        return;
+    }
+    int moveResult = theBoard.movePiece(move);
+    
+    if ((move.getPiece().getColor() == Color.white && move.endLocation() < 8)
+            || (move.getPiece().getColor() == Color.blue && move.endLocation() > 55)) {
+        theBoard.kingPiece(move.endLocation());
+    }
+    
+    // Check if end
+    if (checkEnd()) {
+        endGame(activePlayer.getName() +  
+        " won the game.");
+    }
+    // Validate whos turn it is
+    if (moveResult > 0 && theBoard.getPieceAt(move.endLocation()).canJump())
+        this.endTurn(activePlayer, 0);
+    else
+        this.endTurn(passivePlayer, 0);
+}
+
+public boolean checkEnd() {
+    if (!theBoard.hasPieceOf(Color.white) || !theBoard.hasPieceOf(Color.blue)) {
+        return true;
+    }
+    return false;
+}
     
 }//Driver.java
     

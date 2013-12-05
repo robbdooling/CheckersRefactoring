@@ -12,8 +12,30 @@ public abstract class RuleSet {
     protected boolean validateMove(Move move, Board board) {
         if (board.occupied(move.endLocation()))
             return false;
+        
+        // Check to see if any piece can jump
+        boolean jump_flag = false;
+        boolean self_jump_flag = false;
+        for (int i = 0; i < 64; i++) {
+            Piece p = board.getPieceAt(i);
+            if (p == null || p.getColor() != move.getPiece().getColor())
+                continue;
+            
+            if (p.canJump()) {
+                jump_flag = true;
+                if (p.getLocation() ==  move.getPiece().getLocation())
+                    self_jump_flag = true;
+            }
+        }
+        
+        if (jump_flag && !self_jump_flag)
+            return false;
+        
 
         int moveDistance = move.endLocation() - move.getPiece().getLocation();
+        if (jump_flag && moveDistance <= 9 && moveDistance >= -9)
+            return false;
+        
         boolean flag = false;
         for (int i : moveLocations(move.getPiece())) {
             if (moveDistance == i)
@@ -31,13 +53,18 @@ public abstract class RuleSet {
     /** Check to see if this piece can make a valid jump. */
     protected boolean canJump(Piece piece, Board board) {
         int[] locations = moveLocations(piece);
-        for (int i = 0; i < 2; i++) {
-            if (locations[i] != Integer.MIN_VALUE)
+        for (int i = 0; i < (locations.length / 2); i++) {
+            if (locations[i] == Integer.MIN_VALUE)
                 continue;
-            if (locations[i + 2] == Integer.MIN_VALUE)
+            if (locations[i + (locations.length / 2)] == Integer.MIN_VALUE)
                 continue;
-            if (board.colorAt(piece.getLocation() + (locations[i + 2] / 2)) != piece
-                    .getColor())
+            
+            Piece p = board.getPieceAt(piece.getLocation() + locations[i + (locations.length / 2)]);
+            if (p != null)
+                continue;            
+            
+            p = board.getPieceAt(piece.getLocation() + locations[i]);
+            if (p != null && p.getColor() != piece.getColor())
                 return true;
         }
         return false;
