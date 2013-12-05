@@ -55,4 +55,4 @@ public class SingleRuleSet extends RuleSet {
 
         return locations;
     }
-}
+}//SingleRuleSet.java
