@@ -50,4 +50,4 @@ public class SinglePiece extends Piece {
 	   return type;
    }
    
-}// SinglePiece
+}// SinglePiece.java
