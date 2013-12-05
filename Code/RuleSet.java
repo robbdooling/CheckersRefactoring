@@ -53,4 +53,4 @@ public abstract class RuleSet {
      * position in the board.
      */
     abstract protected int[] moveLocations(Piece piece);
-}
+}//RuleSet.java
