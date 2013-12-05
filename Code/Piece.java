@@ -99,4 +99,4 @@ public class Piece {
         return this.rules.canJump(this, this.board);
     }
 
-}// Piece
+}// Piece.java
