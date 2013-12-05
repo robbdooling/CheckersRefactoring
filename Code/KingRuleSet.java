@@ -54,4 +54,4 @@ public class KingRuleSet extends RuleSet {
     	
     	return locations;
     }
-}
+}//KingRuleSet.java
