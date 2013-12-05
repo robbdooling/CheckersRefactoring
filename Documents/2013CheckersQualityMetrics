@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Metrics scope="Checkers" type="Project" date="2013-12-04" xmlns="http://metrics.sourceforge.net/2003/Metrics-First-Flat">
+   <Metric id = "VG" description ="McCabe Cyclomatic Complexity" max ="10" hint ="use Extract-method to split the method up">
+      <Values per = "method" avg = "3.747" stddev = "6.289" max = "48" maxinrange="false">
+         <Value name="wallPieceMoves" source ="Rules.java" package ="(default package)" value ="48" inrange="false"/>
+         <Value name="actionPerformed" source ="CheckerGUI.java" package ="(default package)" value ="41" inrange="false"/>
+         <Value name="checkForPossibleJumps" source ="Rules.java" package ="(default package)" value ="27" inrange="false"/>
+         <Value name="validateRegularMove" source ="Rules.java" package ="(default package)" value ="24" inrange="false"/>
+         <Value name="checkForOtherPossibleJump" source ="Rules.java" package ="(default package)" value ="22" inrange="false"/>
+         <Value name="validateMove" source ="Rules.java" package ="(default package)" value ="18" inrange="false"/>
+         <Value name="testInvalidMoves" source ="TestingKernel.java" package ="(default package)" value ="18" inrange="false"/>
+         <Value name="update" source ="CheckerGUI.java" package ="(default package)" value ="16" inrange="false"/>
+         <Value name="actionPerformed" source ="Secondscreen.java" package ="(default package)" value ="13" inrange="false"/>
+         <Value name="moveLocations" source ="SingleRuleSet.java" package ="(default package)" value ="13" inrange="false"/>
+         <Value name="checkForMakeKing" source ="Rules.java" package ="(default package)" value ="12" inrange="false"/>
+         <Value name="actionPerformed" source ="Firstscreen.java" package ="(default package)" value ="11" inrange="false"/>
+         <Value name="checkForNoMoves" source ="Rules.java" package ="(default package)" value ="11" inrange="false"/>
+         <Value name="takeColor" source ="NetworkPlayer.java" package ="(default package)" value ="10"/>
+         <Value name="moveLocations" source ="KingRuleSet.java" package ="(default package)" value ="9"/>
+         <Value name="cleanup" source ="NetworkPlayer.java" package ="(default package)" value ="9"/>
+         <Value name="waitForPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="9"/>
+         <Value name="checkForPossibleMoves" source ="Rules.java" package ="(default package)" value ="9"/>
+         <Value name="checkEndConditions" source ="CheckerGUI.java" package ="(default package)" value ="8"/>
+         <Value name="endTurn" source ="Driver.java" package ="(default package)" value ="8"/>
+         <Value name="processCommand" source ="NetworkPlayer.java" package ="(default package)" value ="8"/>
+         <Value name="setTimer" source ="Driver.java" package ="(default package)" value ="7"/>
+         <Value name="waitForConnect" source ="NetworkPlayer.java" package ="(default package)" value ="7"/>
+         <Value name="validateMove" source ="RuleSet.java" package ="(default package)" value ="7"/>
+         <Value name="testForcedJump" source ="TestingKernel.java" package ="(default package)" value ="7"/>
+         <Value name="testMultJumps" source ="TestingKernel.java" package ="(default package)" value ="7"/>
+         <Value name="updateTime" source ="CheckerGUI.java" package ="(default package)" value ="6"/>
+         <Value name="takeName" source ="NetworkPlayer.java" package ="(default package)" value ="6"/>
+         <Value name="initComponents" source ="CheckerGUI.java" package ="(default package)" value ="5"/>
+         <Value name="selectSpace" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="sendCommand" source ="NetworkPlayer.java" package ="(default package)" value ="5"/>
+         <Value name="canJump" source ="RuleSet.java" package ="(default package)" value ="5"/>
+         <Value name="bluePieces" source ="Board.java" package ="(default package)" value ="4"/>
+         <Value name="getPieceAt" source ="Board.java" package ="(default package)" value ="4"/>
+         <Value name="hasPieceOf" source ="Board.java" package ="(default package)" value ="4"/>
+         <Value name="occupied" source ="Board.java" package ="(default package)" value ="4"/>
+         <Value name="whitePieces" source ="Board.java" package ="(default package)" value ="4"/>
+         <Value name="createPlayer" source ="Driver.java" package ="(default package)" value ="4"/>
+         <Value name="setGameMode" source ="Driver.java" package ="(default package)" value ="4"/>
+         <Value name="startGame" source ="Driver.java" package ="(default package)" value ="4"/>
+         <Value name="sendColor" source ="NetworkPlayer.java" package ="(default package)" value ="4"/>
+         <Value name="sendMove" source ="NetworkPlayer.java" package ="(default package)" value ="4"/>
+         <Value name="sendName" source ="NetworkPlayer.java" package ="(default package)" value ="4"/>
+         <Value name="initComponents" source ="Secondscreen.java" package ="(default package)" value ="4"/>
+         <Value name="testBasicMoves" source ="TestingKernel.java" package ="(default package)" value ="4"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="3"/>
+         <Value name="drawOffered" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="makeLocalMove" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="acceptDraw" source ="LocalPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="connectToHost" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="stateChanged" source ="Secondscreen.java" package ="(default package)" value ="3"/>
+         <Value name="report" source ="TestingKernel.java" package ="(default package)" value ="3"/>
+         <Value name="testBounds" source ="TestingKernel.java" package ="(default package)" value ="3"/>
+         <Value name="run" source ="Timer.java" package ="(default package)" value ="3"/>
+         <Value name="colorAt" source ="Board.java" package ="(default package)" value ="2"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="2"/>
+         <Value name="register" source ="CheckerGUI.java" package ="(default package)" value ="2"/>
+         <Value name="declineDraw" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="getTime" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="getTimer" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="getTimerWarning" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="selectColors" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setHost" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setPlayerColor" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setPlayerName" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="acceptDraw" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="endOfGame" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="offerDraw" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="checkEndCond" source ="Rules.java" package ="(default package)" value ="2"/>
+         <Value name="checkForNoPieces" source ="Rules.java" package ="(default package)" value ="2"/>
+         <Value name="setBegin" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="simpleWait" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="kingPiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="removePiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="sizeOf" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[#windowClosing" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="addActionListener" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endGame" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endInQuit" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getActivePlayer" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getGameMode" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getOppositePlayer" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer1" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer2" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="pressDraw" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="setPlayerModes" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="stateOfBoard" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="timerRunning" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="whosTurn" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="initComponents" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen.anonymous#~initComponents[#windowClosing" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endOfGame" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="offerDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="endLocation" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="getPiece" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="startLocation" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="endLocation" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="execute" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="startLocation" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="toString" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayerType" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="setHost" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="canJump" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getColor" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getId" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getLocation" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="move" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="upgrade" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="validateMove" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="main" source ="PlayCheckers.java" package ="(default package)" value ="1"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="acceptDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="beginTurn" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="createMove" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endOfGame" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endTurn" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getColor" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getName" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getNumber" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="makeMove" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="offerDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="sendMoveToDriver" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setColor" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setName" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="toString" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="moveLocations" source ="RuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="1"/>
+         <Value name="fillWallVector" source ="Rules.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen.anonymous#~initComponents[#windowClosing" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="beginTests" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="main" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="testDraw" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="getTime" source ="Timer.java" package ="(default package)" value ="1"/>
+      </Values>
+   </Metric>
+   <Metric id = "PAR" description ="Number of Parameters" max ="5" hint ="Move invoked method or pass an object">
+      <Values per = "method" avg = "0.789" stddev = "0.93" max = "4">
+         <Value name="wallPieceMoves" source ="Rules.java" package ="(default package)" value ="4"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="3"/>
+         <Value name="createPlayer" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="3"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="3"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="3"/>
+         <Value name="checkForOtherPossibleJump" source ="Rules.java" package ="(default package)" value ="3"/>
+         <Value name="checkForPossibleJumps" source ="Rules.java" package ="(default package)" value ="3"/>
+         <Value name="checkForPossibleMoves" source ="Rules.java" package ="(default package)" value ="3"/>
+         <Value name="validateRegularMove" source ="Rules.java" package ="(default package)" value ="3"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="3"/>
+         <Value name="report" source ="TestingKernel.java" package ="(default package)" value ="3"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="2"/>
+         <Value name="endTurn" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setPlayerColor" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setPlayerModes" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setPlayerName" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setTimer" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="2"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="2"/>
+         <Value name="makeMove" source ="Player.java" package ="(default package)" value ="2"/>
+         <Value name="canJump" source ="RuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="validateMove" source ="RuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="2"/>
+         <Value name="checkForMakeKing" source ="Rules.java" package ="(default package)" value ="2"/>
+         <Value name="colorAt" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="getPieceAt" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="hasPieceOf" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="kingPiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="occupied" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="removePiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="actionPerformed" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[#windowClosing" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="addActionListener" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="declineDraw" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="drawOffered" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endGame" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endInQuit" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="selectSpace" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="setGameMode" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="setHost" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="actionPerformed" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen.anonymous#~initComponents[#windowClosing" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="moveLocations" source ="KingRuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="acceptDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endOfGame" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="offerDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="execute" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="acceptDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endOfGame" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="offerDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="processCommand" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="sendCommand" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="setHost" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="move" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="validateMove" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="main" source ="PlayCheckers.java" package ="(default package)" value ="1"/>
+         <Value name="acceptDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="createMove" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endOfGame" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="offerDraw" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="sendMoveToDriver" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setColor" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setName" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="moveLocations" source ="RuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="validateMove" source ="Rules.java" package ="(default package)" value ="1"/>
+         <Value name="actionPerformed" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen.anonymous#~initComponents[#windowClosing" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="stateChanged" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="moveLocations" source ="SingleRuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="main" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="bluePieces" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="sizeOf" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="whitePieces" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="checkEndConditions" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="initComponents" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="register" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="update" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="updateTime" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getActivePlayer" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getGameMode" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getOppositePlayer" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getPlayer1" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getPlayer2" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getTime" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getTimer" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="getTimerWarning" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="makeLocalMove" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="pressDraw" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="selectColors" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="startGame" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="stateOfBoard" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="timerRunning" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="whosTurn" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="initComponents" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="getType" source ="KingPiece.java" package ="(default package)" value ="0"/>
+         <Value name="endLocation" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="getPiece" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="getPlayer" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="startLocation" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="endLocation" source ="NetworkMove.java" package ="(default package)" value ="0"/>
+         <Value name="startLocation" source ="NetworkMove.java" package ="(default package)" value ="0"/>
+         <Value name="toString" source ="NetworkMove.java" package ="(default package)" value ="0"/>
+         <Value name="cleanup" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="connectToHost" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="getPlayerType" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="sendColor" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="sendMove" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="sendName" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="takeColor" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="takeName" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="waitForConnect" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="waitForPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="canJump" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="getColor" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="getId" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="getLocation" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="getType" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="upgrade" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="beginTurn" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="endTurn" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="getColor" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="getName" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="getNumber" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="getType" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="toString" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="checkEndCond" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="checkForNoMoves" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="checkForNoPieces" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="fillWallVector" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="initComponents" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="getType" source ="SinglePiece.java" package ="(default package)" value ="0"/>
+         <Value name="beginTests" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="setBegin" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="simpleWait" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="testBasicMoves" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="testBounds" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="testDraw" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="testForcedJump" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="testInvalidMoves" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="testMultJumps" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="0"/>
+         <Value name="getTime" source ="Timer.java" package ="(default package)" value ="0"/>
+         <Value name="run" source ="Timer.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NBD" description ="Nested Block Depth" max ="5" hint ="use Extract-method to split the method up">
+      <Values per = "method" avg = "1.873" stddev = "1.423" max = "8" maxinrange="false">
+         <Value name="checkForOtherPossibleJump" source ="Rules.java" package ="(default package)" value ="8" inrange="false"/>
+         <Value name="checkForPossibleJumps" source ="Rules.java" package ="(default package)" value ="7" inrange="false"/>
+         <Value name="wallPieceMoves" source ="Rules.java" package ="(default package)" value ="7" inrange="false"/>
+         <Value name="update" source ="CheckerGUI.java" package ="(default package)" value ="6" inrange="false"/>
+         <Value name="validateMove" source ="Rules.java" package ="(default package)" value ="6" inrange="false"/>
+         <Value name="actionPerformed" source ="Secondscreen.java" package ="(default package)" value ="6" inrange="false"/>
+         <Value name="checkEndConditions" source ="CheckerGUI.java" package ="(default package)" value ="5"/>
+         <Value name="actionPerformed" source ="Firstscreen.java" package ="(default package)" value ="5"/>
+         <Value name="takeColor" source ="NetworkPlayer.java" package ="(default package)" value ="5"/>
+         <Value name="checkForMakeKing" source ="Rules.java" package ="(default package)" value ="5"/>
+         <Value name="checkForNoMoves" source ="Rules.java" package ="(default package)" value ="5"/>
+         <Value name="bluePieces" source ="Board.java" package ="(default package)" value ="4"/>
+         <Value name="whitePieces" source ="Board.java" package ="(default package)" value ="4"/>
+         <Value name="actionPerformed" source ="CheckerGUI.java" package ="(default package)" value ="4"/>
+         <Value name="initComponents" source ="CheckerGUI.java" package ="(default package)" value ="4"/>
+         <Value name="endTurn" source ="Driver.java" package ="(default package)" value ="4"/>
+         <Value name="takeName" source ="NetworkPlayer.java" package ="(default package)" value ="4"/>
+         <Value name="waitForPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="4"/>
+         <Value name="checkForPossibleMoves" source ="Rules.java" package ="(default package)" value ="4"/>
+         <Value name="validateRegularMove" source ="Rules.java" package ="(default package)" value ="4"/>
+         <Value name="getPieceAt" source ="Board.java" package ="(default package)" value ="3"/>
+         <Value name="hasPieceOf" source ="Board.java" package ="(default package)" value ="3"/>
+         <Value name="updateTime" source ="CheckerGUI.java" package ="(default package)" value ="3"/>
+         <Value name="selectSpace" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="setTimer" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="moveLocations" source ="KingRuleSet.java" package ="(default package)" value ="3"/>
+         <Value name="cleanup" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="processCommand" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="sendColor" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="sendCommand" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="sendMove" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="sendName" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="waitForConnect" source ="NetworkPlayer.java" package ="(default package)" value ="3"/>
+         <Value name="moveLocations" source ="SingleRuleSet.java" package ="(default package)" value ="3"/>
+         <Value name="run" source ="Timer.java" package ="(default package)" value ="3"/>
+         <Value name="colorAt" source ="Board.java" package ="(default package)" value ="2"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="2"/>
+         <Value name="occupied" source ="Board.java" package ="(default package)" value ="2"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="2"/>
+         <Value name="register" source ="CheckerGUI.java" package ="(default package)" value ="2"/>
+         <Value name="createPlayer" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="declineDraw" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="drawOffered" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="getTime" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="getTimer" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="getTimerWarning" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="makeLocalMove" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="selectColors" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setGameMode" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setHost" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setPlayerColor" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="setPlayerName" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="startGame" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="initComponents" source ="Firstscreen.java" package ="(default package)" value ="2"/>
+         <Value name="acceptDraw" source ="LocalPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="acceptDraw" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="connectToHost" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="endOfGame" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="offerDraw" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="canJump" source ="RuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="validateMove" source ="RuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="checkEndCond" source ="Rules.java" package ="(default package)" value ="2"/>
+         <Value name="checkForNoPieces" source ="Rules.java" package ="(default package)" value ="2"/>
+         <Value name="initComponents" source ="Secondscreen.java" package ="(default package)" value ="2"/>
+         <Value name="stateChanged" source ="Secondscreen.java" package ="(default package)" value ="2"/>
+         <Value name="report" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="setBegin" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="simpleWait" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="testBasicMoves" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="testBounds" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="testForcedJump" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="testInvalidMoves" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="testMultJumps" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="kingPiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="removePiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="sizeOf" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[#windowClosing" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="addActionListener" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endGame" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="endInQuit" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getActivePlayer" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getGameMode" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getOppositePlayer" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer1" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer2" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="pressDraw" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="setPlayerModes" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="stateOfBoard" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="timerRunning" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="whosTurn" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen.anonymous#~initComponents[#windowClosing" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endOfGame" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="offerDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="endLocation" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="getPiece" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="startLocation" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="endLocation" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="execute" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="startLocation" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="toString" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDeclineDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endInDraw" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayerType" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="setHost" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="canJump" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getColor" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getId" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getLocation" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="move" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="upgrade" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="validateMove" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="main" source ="PlayCheckers.java" package ="(default package)" value ="1"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="beginTurn" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="createMove" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endTurn" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getColor" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getName" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getNumber" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="makeMove" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="sendMoveToDriver" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setColor" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setName" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="toString" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="1"/>
+         <Value name="fillWallVector" source ="Rules.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen.anonymous#~initComponents[#windowClosing" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="beginTests" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="main" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="testDraw" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="getTime" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="acceptDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="endInDeclineDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="endInDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="endOfGame" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="offerDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="moveLocations" source ="RuleSet.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "CA" description ="Afferent Coupling">
+      <Values per = "packageFragment" avg = "0" stddev = "0" max = "0">
+         <Value name="(default package)" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "CE" description ="Efferent Coupling">
+      <Values per = "packageFragment" avg = "0" stddev = "0" max = "0">
+         <Value name="(default package)" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "RMI" description ="Instability">
+      <Values per = "packageFragment" avg = "1" stddev = "0" max = "1">
+         <Value name="(default package)" package ="(default package)" value ="1"/>
+      </Values>
+   </Metric>
+   <Metric id = "RMA" description ="Abstractness">
+      <Values per = "packageFragment" avg = "0.1" stddev = "0" max = "0.1">
+         <Value name="(default package)" package ="(default package)" value ="0.1"/>
+      </Values>
+   </Metric>
+   <Metric id = "RMD" description ="Normalized Distance">
+      <Values per = "packageFragment" avg = "0.1" stddev = "0" max = "0.1">
+         <Value name="(default package)" package ="(default package)" value ="0.1"/>
+      </Values>
+   </Metric>
+   <Metric id = "DIT" description ="Depth of Inheritance Tree">
+      <Values per = "type" avg = "2.1" stddev = "1.7" max = "6">
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="6"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="6"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="6"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="2"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="2"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="2"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="2"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="2"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="2"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="1"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="1"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+      </Values>
+   </Metric>
+   <Metric id = "WMC" description ="Weighted methods per Class">
+      <Values per = "type" total = "622" avg = "31.1" stddev = "42.218" max = "177">
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="177"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="83"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="80"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="73"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="50"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="29"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="22"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="18"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="14"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="13"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="13"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="10"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="9"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="8"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="6"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="6"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="6"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="2"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="2"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+      </Values>
+   </Metric>
+   <Metric id = "NSC" description ="Number of Children">
+      <Values per = "type" total = "6" avg = "0.3" stddev = "0.714" max = "2">
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="2"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="2"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="0"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="0"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="0"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NORM" description ="Number of Overridden Methods">
+      <Values per = "type" total = "5" avg = "0.25" stddev = "0.433" max = "1">
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="0"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "LCOM" description ="Lack of Cohesion of Methods">
+      <Values per = "type" avg = "0.382" stddev = "0.388" max = "0.899">
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="0.899"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="0.895"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="0.864"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="0.788"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="0.771"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="0.75"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="0.696"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="0.69"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="0.69"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="0.6"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="0"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="0"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="0"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="0"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NOF" description ="Number of Attributes">
+      <Values per = "type" total = "97" avg = "4.85" stddev = "4.788" max = "14">
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="14"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="13"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="11"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="11"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="9"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="9"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="8"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="6"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="6"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="4"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="2"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="0"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NSF" description ="Number of Static Attributes">
+      <Values per = "type" total = "30" avg = "1.5" stddev = "2.52" max = "10">
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="10"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="6"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="4"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="3"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="2"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="2"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="0"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="0"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NOM" description ="Number of Methods">
+      <Values per = "type" total = "164" avg = "8.2" stddev = "7.756" max = "33">
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="33"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="19"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="18"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="12"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="12"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="11"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="10"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="9"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="6"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="6"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="6"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="5"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="4"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="4"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="3"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="2"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="2"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NSM" description ="Number of Static Methods">
+      <Values per = "type" total = "2" avg = "0.1" stddev = "0.3" max = "1">
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="1"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="1"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="0"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="0"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "SIX" description ="Specialization Index">
+      <Values per = "type" avg = "0.136" stddev = "0.309" max = "1">
+         <Value name="CheckerGUI.anonymous#~initComponents[" source ="CheckerGUI.java" package ="(default package)" value ="2"/>
+         <Value name="Firstscreen.anonymous#~initComponents[" source ="Firstscreen.java" package ="(default package)" value ="2"/>
+         <Value name="Secondscreen.anonymous#~initComponents[" source ="Secondscreen.java" package ="(default package)" value ="2"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="0.5"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="0.167"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="0.056"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="0"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="0"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="0"/>
+         <Value name="KingRuleSet" source ="KingRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="0"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="0"/>
+         <Value name="PlayCheckers" source ="PlayCheckers.java" package ="(default package)" value ="0"/>
+         <Value name="RuleSet" source ="RuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="0"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="0"/>
+         <Value name="SingleRuleSet" source ="SingleRuleSet.java" package ="(default package)" value ="0"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NOC" description ="Number of Classes">
+      <Values per = "packageFragment" total = "20" avg = "20" stddev = "0" max = "20">
+         <Value name="(default package)" package ="(default package)" value ="20"/>
+      </Values>
+   </Metric>
+   <Metric id = "NOI" description ="Number of Interfaces">
+      <Values per = "packageFragment" total = "0" avg = "0" stddev = "0" max = "0">
+         <Value name="(default package)" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   <Metric id = "NOP" description ="Number of Packages">
+      <Value value="1"/>
+   </Metric>
+   <Metric id = "TLOC" description ="Total Lines of Code">
+      <Value value="2832"/>
+   </Metric>
+   <Metric id = "MLOC" description ="Method Lines of Code">
+      <Values per = "method" total = "2252" avg = "13.566" stddev = "25.166" max = "160">
+         <Value name="wallPieceMoves" source ="Rules.java" package ="(default package)" value ="160"/>
+         <Value name="initComponents" source ="Secondscreen.java" package ="(default package)" value ="139"/>
+         <Value name="checkForPossibleJumps" source ="Rules.java" package ="(default package)" value ="105"/>
+         <Value name="testInvalidMoves" source ="TestingKernel.java" package ="(default package)" value ="104"/>
+         <Value name="initComponents" source ="Firstscreen.java" package ="(default package)" value ="90"/>
+         <Value name="initComponents" source ="CheckerGUI.java" package ="(default package)" value ="86"/>
+         <Value name="checkForOtherPossibleJump" source ="Rules.java" package ="(default package)" value ="81"/>
+         <Value name="validateMove" source ="Rules.java" package ="(default package)" value ="78"/>
+         <Value name="testMultJumps" source ="TestingKernel.java" package ="(default package)" value ="68"/>
+         <Value name="actionPerformed" source ="CheckerGUI.java" package ="(default package)" value ="60"/>
+         <Value name="processCommand" source ="NetworkPlayer.java" package ="(default package)" value ="58"/>
+         <Value name="update" source ="CheckerGUI.java" package ="(default package)" value ="52"/>
+         <Value name="actionPerformed" source ="Secondscreen.java" package ="(default package)" value ="51"/>
+         <Value name="actionPerformed" source ="Firstscreen.java" package ="(default package)" value ="46"/>
+         <Value name="waitForPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="45"/>
+         <Value name="takeColor" source ="NetworkPlayer.java" package ="(default package)" value ="44"/>
+         <Value name="cleanup" source ="NetworkPlayer.java" package ="(default package)" value ="38"/>
+         <Value name="checkForPossibleMoves" source ="Rules.java" package ="(default package)" value ="38"/>
+         <Value name="validateRegularMove" source ="Rules.java" package ="(default package)" value ="38"/>
+         <Value name="waitForConnect" source ="NetworkPlayer.java" package ="(default package)" value ="37"/>
+         <Value name="testForcedJump" source ="TestingKernel.java" package ="(default package)" value ="36"/>
+         <Value name="checkForNoMoves" source ="Rules.java" package ="(default package)" value ="34"/>
+         <Value name="takeName" source ="NetworkPlayer.java" package ="(default package)" value ="33"/>
+         <Value name="endTurn" source ="Driver.java" package ="(default package)" value ="27"/>
+         <Value name="Board" source ="Board.java" package ="(default package)" value ="25"/>
+         <Value name="beginTests" source ="TestingKernel.java" package ="(default package)" value ="23"/>
+         <Value name="checkEndConditions" source ="CheckerGUI.java" package ="(default package)" value ="21"/>
+         <Value name="testBasicMoves" source ="TestingKernel.java" package ="(default package)" value ="20"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="19"/>
+         <Value name="connectToHost" source ="NetworkPlayer.java" package ="(default package)" value ="19"/>
+         <Value name="sendColor" source ="NetworkPlayer.java" package ="(default package)" value ="18"/>
+         <Value name="sendName" source ="NetworkPlayer.java" package ="(default package)" value ="17"/>
+         <Value name="checkForMakeKing" source ="Rules.java" package ="(default package)" value ="17"/>
+         <Value name="sendMove" source ="NetworkPlayer.java" package ="(default package)" value ="16"/>
+         <Value name="testBounds" source ="TestingKernel.java" package ="(default package)" value ="16"/>
+         <Value name="sendCommand" source ="NetworkPlayer.java" package ="(default package)" value ="15"/>
+         <Value name="updateTime" source ="CheckerGUI.java" package ="(default package)" value ="14"/>
+         <Value name="startGame" source ="Driver.java" package ="(default package)" value ="14"/>
+         <Value name="validateMove" source ="RuleSet.java" package ="(default package)" value ="14"/>
+         <Value name="createPlayer" source ="Driver.java" package ="(default package)" value ="13"/>
+         <Value name="acceptDraw" source ="LocalPlayer.java" package ="(default package)" value ="13"/>
+         <Value name="acceptDraw" source ="NetworkPlayer.java" package ="(default package)" value ="13"/>
+         <Value name="setBegin" source ="TestingKernel.java" package ="(default package)" value ="12"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="11"/>
+         <Value name="selectSpace" source ="Driver.java" package ="(default package)" value ="11"/>
+         <Value name="setTimer" source ="Driver.java" package ="(default package)" value ="11"/>
+         <Value name="canJump" source ="RuleSet.java" package ="(default package)" value ="11"/>
+         <Value name="report" source ="TestingKernel.java" package ="(default package)" value ="11"/>
+         <Value name="bluePieces" source ="Board.java" package ="(default package)" value ="9"/>
+         <Value name="getPieceAt" source ="Board.java" package ="(default package)" value ="9"/>
+         <Value name="whitePieces" source ="Board.java" package ="(default package)" value ="9"/>
+         <Value name="stateChanged" source ="Secondscreen.java" package ="(default package)" value ="9"/>
+         <Value name="hasPieceOf" source ="Board.java" package ="(default package)" value ="8"/>
+         <Value name="endOfGame" source ="NetworkPlayer.java" package ="(default package)" value ="8"/>
+         <Value name="offerDraw" source ="NetworkPlayer.java" package ="(default package)" value ="8"/>
+         <Value name="fillWallVector" source ="Rules.java" package ="(default package)" value ="8"/>
+         <Value name="run" source ="Timer.java" package ="(default package)" value ="8"/>
+         <Value name="selectColors" source ="Driver.java" package ="(default package)" value ="7"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="7"/>
+         <Value name="Player" source ="Player.java" package ="(default package)" value ="7"/>
+         <Value name="declineDraw" source ="Driver.java" package ="(default package)" value ="6"/>
+         <Value name="endInDraw" source ="LocalPlayer.java" package ="(default package)" value ="6"/>
+         <Value name="endOfGame" source ="LocalPlayer.java" package ="(default package)" value ="6"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="6"/>
+         <Value name="checkForNoPieces" source ="Rules.java" package ="(default package)" value ="6"/>
+         <Value name="Secondscreen" source ="Secondscreen.java" package ="(default package)" value ="6"/>
+         <Value name="colorAt" source ="Board.java" package ="(default package)" value ="5"/>
+         <Value name="movePiece" source ="Board.java" package ="(default package)" value ="5"/>
+         <Value name="occupied" source ="Board.java" package ="(default package)" value ="5"/>
+         <Value name="register" source ="CheckerGUI.java" package ="(default package)" value ="5"/>
+         <Value name="drawOffered" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="getTime" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="getTimer" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="getTimerWarning" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="makeLocalMove" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="setGameMode" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="setPlayerColor" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="setPlayerName" source ="Driver.java" package ="(default package)" value ="5"/>
+         <Value name="endInDeclineDraw" source ="LocalPlayer.java" package ="(default package)" value ="5"/>
+         <Value name="checkEndCond" source ="Rules.java" package ="(default package)" value ="5"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="4"/>
+         <Value name="generateActionPerformed" source ="Driver.java" package ="(default package)" value ="4"/>
+         <Value name="setHost" source ="Driver.java" package ="(default package)" value ="4"/>
+         <Value name="Firstscreen" source ="Firstscreen.java" package ="(default package)" value ="4"/>
+         <Value name="Move" source ="Move.java" package ="(default package)" value ="4"/>
+         <Value name="Piece" source ="Piece.java" package ="(default package)" value ="4"/>
+         <Value name="makeMove" source ="Player.java" package ="(default package)" value ="4"/>
+         <Value name="TestingKernel" source ="TestingKernel.java" package ="(default package)" value ="4"/>
+         <Value name="endGame" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="setPlayerModes" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="whosTurn" source ="Driver.java" package ="(default package)" value ="3"/>
+         <Value name="main" source ="PlayCheckers.java" package ="(default package)" value ="3"/>
+         <Value name="Rules" source ="Rules.java" package ="(default package)" value ="3"/>
+         <Value name="Driver" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="endInDraw" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="endInQuit" source ="Driver.java" package ="(default package)" value ="2"/>
+         <Value name="KingPiece" source ="KingPiece.java" package ="(default package)" value ="2"/>
+         <Value name="moveLocations" source ="KingRuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="LocalPlayer" source ="LocalPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="2"/>
+         <Value name="NetworkMove" source ="NetworkMove.java" package ="(default package)" value ="2"/>
+         <Value name="toString" source ="NetworkMove.java" package ="(default package)" value ="2"/>
+         <Value name="NetworkPlayer" source ="NetworkPlayer.java" package ="(default package)" value ="2"/>
+         <Value name="upgrade" source ="Piece.java" package ="(default package)" value ="2"/>
+         <Value name="SinglePiece" source ="SinglePiece.java" package ="(default package)" value ="2"/>
+         <Value name="moveLocations" source ="SingleRuleSet.java" package ="(default package)" value ="2"/>
+         <Value name="main" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="simpleWait" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="testDraw" source ="TestingKernel.java" package ="(default package)" value ="2"/>
+         <Value name="kingPiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="removePiece" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="sizeOf" source ="Board.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI.anonymous#~initComponents[#windowClosing" source ="CheckerGUI.java" package ="(default package)" value ="1"/>
+         <Value name="addActionListener" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getActivePlayer" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getGameMode" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getOppositePlayer" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer1" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer2" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="pressDraw" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="stateOfBoard" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="timerRunning" source ="Driver.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Firstscreen.anonymous#~initComponents[#windowClosing" source ="Firstscreen.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="KingPiece.java" package ="(default package)" value ="1"/>
+         <Value name="offerDraw" source ="LocalPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="endLocation" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="getPiece" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayer" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="startLocation" source ="Move.java" package ="(default package)" value ="1"/>
+         <Value name="endLocation" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="execute" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="startLocation" source ="NetworkMove.java" package ="(default package)" value ="1"/>
+         <Value name="getPlayerType" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="setHost" source ="NetworkPlayer.java" package ="(default package)" value ="1"/>
+         <Value name="canJump" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getColor" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getId" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getLocation" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="move" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="validateMove" source ="Piece.java" package ="(default package)" value ="1"/>
+         <Value name="beginTurn" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="createMove" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="endTurn" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getColor" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getName" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getNumber" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setColor" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="setName" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="toString" source ="Player.java" package ="(default package)" value ="1"/>
+         <Value name="moveLocations" source ="RuleSet.java" package ="(default package)" value ="1"/>
+         <Value name="exitForm" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="Secondscreen.anonymous#~initComponents[#windowClosing" source ="Secondscreen.java" package ="(default package)" value ="1"/>
+         <Value name="getType" source ="SinglePiece.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="Timer" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="getTime" source ="Timer.java" package ="(default package)" value ="1"/>
+         <Value name="CheckerGUI" source ="CheckerGUI.java" package ="(default package)" value ="0"/>
+         <Value name="endInDeclineDraw" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="endInDraw" source ="NetworkPlayer.java" package ="(default package)" value ="0"/>
+         <Value name="acceptDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="endInDeclineDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="endInDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="endOfGame" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="offerDraw" source ="Player.java" package ="(default package)" value ="0"/>
+         <Value name="sendMoveToDriver" source ="Player.java" package ="(default package)" value ="0"/>
+      </Values>
+   </Metric>
+   </Metrics>
