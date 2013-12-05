@@ -778,4 +778,4 @@ public class NetworkPlayer extends Player {
    public void endInDraw( Player player ) {
    }
    
-}
+}//NetworkPlayer.java
